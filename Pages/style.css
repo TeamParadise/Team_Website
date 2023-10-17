@@ -197,7 +197,7 @@
         display: block;
         padding: 15px;
         text-decoration: none;
-        color: #aaa;
+        color: #141415;
         font-weight: 800;
         text-transform: uppercase;
       }
@@ -207,7 +207,7 @@
         transition: all .2s;
       }
       nav ul li a:hover {
-        color: #555;
+        color: #000000;
       }
 
       nav.fill ul li a {
