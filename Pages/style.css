@@ -1,6 +1,6 @@
 @font-face { font-family: OpenSans; src: url('../Resources/openSans.ttf'); } 
       html{
-        background-color: #141415;
+        background-color: #c3153a;
         font-family: OpenSans;
       }
       /*SCROLLBAR*/
@@ -11,12 +11,12 @@
       /* Handle */
       ::-webkit-scrollbar-thumb {
         border-radius: 10px;
-        background: rgb(163, 47, 47);
+        background: #141415;
       }
 
       /* Handle on hover */
       ::-webkit-scrollbar-thumb:hover {
-        background: rgb(163, 47, 47);
+        background: #000000);
       }
 
       .logo-container{
@@ -63,7 +63,7 @@
       } */
       .divider hr{
         height: 1px;
-        background-color: rgb(163, 47, 47);
+        background-color: #141415;
         border: none;
         width: 40%;
         padding: 10px, 10px;
@@ -159,7 +159,7 @@
       }
       .people-container .person .name{
         font-size: px;
-        color: rgb(163, 47, 47);
+        color: #c3153a;
       }
       .people-container .person .pTitle{
         font-size: 18px;
