@@ -74,7 +74,7 @@
         justify-content: center;
       }
       h1{
-        color:rgb(163, 47, 47)
+        color: #141415
       }
       /*Mobile*/
       @media screen and (max-width: 1200px) {
@@ -132,7 +132,7 @@
 
       .page-title{
         font-size: 100px;
-        color:rgb(163, 47, 47);
+        color: #141415;
         font-family: OpenSans;
       }
       .Title-Container{
@@ -166,7 +166,7 @@
         color: rgb(224, 198, 83);
       }
       .sponsor-amount{
-        color: #738180;
+        color: #000000;
         size:18px;
       }
       .sponsor-detail{
