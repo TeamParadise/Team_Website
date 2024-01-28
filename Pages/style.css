@@ -1,6 +1,6 @@
 @font-face { font-family: OpenSans; src: url('../Resources/openSans.ttf'); } 
       html{
-        background-color: #c3153a;
+  background-color: #f1f1f1;
         font-family: OpenSans;
       }
       /*SCROLLBAR*/
@@ -159,7 +159,7 @@
       }
       .people-container .person .name{
         font-size: px;
-        color: #f1f1f1;
+        color: #000000;
       }
       .people-container .person .pTitle{
         font-size: 18px;
@@ -170,7 +170,7 @@
         size:18px;
       }
       .sponsor-detail{
-        color:#f1f1f1;
+        color:#000000;
         size:14px;
       }
       .ul-list{
