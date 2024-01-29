@@ -21,25 +21,16 @@
 
       /* Logo + Background Image */
       .logo-container {
-            position: fixed ;            
-            display: block;
+            display: flex;
             align-items: center;
             justify-content: center;
             height: 100%;
       }
 
-      /* .logo-image {
-            position: absolute;
-      } */
-
       .Logo-Image{
-            z-index: 2;
             width: 60%;
       }
 
-      .Background-Image {
-            z-index: 1;
-      }
 
       /* Navigation Bar */
        ul{
@@ -109,6 +100,15 @@
       h1{
         color: #141415
       }
+
+      #About-Us::before {
+            background-image: url('./Pages/Resources.html');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0;
+
+
       /*Mobile*/
       @media screen and (max-width: 1200px) {
         /* comes into effect for screens larger than or equal to 481 pixels */
