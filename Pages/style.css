@@ -21,10 +21,12 @@
 
       /* Logo + Background Image */
       .logo-container {
+            position: fixed;
             display: flex;
             align-items: center;
             justify-content: center;
             height: 100%;
+            z-index: 1
       }
 
       .Logo-Image{
@@ -43,7 +45,7 @@
       }
 
 
-      li{
+      li {
         display: inline;
       }
 
@@ -52,7 +54,7 @@
             display: none;
             position: absolute;
             background-color: #c3153a;
-            order: 3; 
+            z-index: 100; 
       }
 
       /* Dropdown Text */
@@ -106,7 +108,7 @@
             background-position: center;
             background-repeat: no-repeat;
             background-position-y: top;
-            background-attachment: scroll;
+            z-index: 150;
       }
       
 
