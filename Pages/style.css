@@ -101,12 +101,13 @@
         color: #141415
       }
 
-      #About-Us::before {
+      /* #About-Us::before {
             background-image: url('./Pages/Resources.html');
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
             margin: 0;
+      */
 
 
       /*Mobile*/
