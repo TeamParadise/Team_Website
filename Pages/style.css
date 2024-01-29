@@ -33,12 +33,12 @@
       }
 
       .Logo-Image{
-            z-index: 2;
+            order: 2;
             width: 60%;
       }
 
       .Background-Image {
-            z-index: 1;
+            order: 1;
       }
 
       /* Navigation Bar */
@@ -61,7 +61,7 @@
             display: none;
             position: absolute;
             background-color: #c3153a;
-            z-index: 3; 
+            order: 3; 
       }
 
       /* Dropdown Text */
