@@ -38,7 +38,7 @@
       }
 
       .Background-Image {
-            z-index: 3;
+            z-index: 1;
       }
 
       /* Navigation Bar */
@@ -61,7 +61,7 @@
             display: none;
             position: absolute;
             background-color: #c3153a;
-            z-index: 1; 
+            z-index: 3; 
       }
 
       /* Dropdown Text */
