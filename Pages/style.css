@@ -30,15 +30,15 @@
 
       .logo-image {
             position: absolute;
-            width: 60%;
       }
 
       .Logo-Image{
             z-index: 2;
+            width: 60%;
       }
 
       .Background-Image {
-            z-index: 1;
+            z-index: 3;
       }
 
       /* Navigation Bar */
@@ -61,6 +61,7 @@
             display: none;
             position: absolute;
             background-color: #c3153a;
+            z-index: 1; 
       }
 
       /* Dropdown Text */
