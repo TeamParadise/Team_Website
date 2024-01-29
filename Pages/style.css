@@ -21,16 +21,16 @@
 
       /* Logo + Background Image */
       .logo-container {
-            position: relative;            
+            position: fixed ;            
             display: flex;
             align-items: center;
             justify-content: center;
             height: 100%;
       }
 
-      .logo-image {
+      /* .logo-image {
             position: absolute;
-      }
+      } */
 
       .Logo-Image{
             order: 2;
