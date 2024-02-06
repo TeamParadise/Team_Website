@@ -37,3 +37,14 @@ function isEmail(email) {
     
   }
  }
+
+/* function scrollPosition() {
+  var navBar = getElementById("nav-bar");
+  var scrollPosition = this.window.scrollY;
+
+  if (scrollPosition > 100) {
+    navBar.style.backgroundColor = "black";
+  } else {
+    navBar.style.backgroundColor = "red";
+  }
+ }; */
