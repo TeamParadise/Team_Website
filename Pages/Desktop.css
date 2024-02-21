@@ -277,6 +277,43 @@ main {
     display: flex;
 }
 
+.social-icons {
+    position: relative;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px; /* Optional, for rounded corners */
+}
+
+.social-icons ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Displays the icons in a row */
+}
+
+.social-icons ul li {
+    margin-right: 10px; /* Adds some space between icons */
+}
+
+.social-icons ul li:last-child {
+    margin-right: 0; /* Removes margin from the last icon */
+}
+
+.social-icons ul li a img {
+    width: 24px; /* Adjusts the size of the icons */
+    height: auto;
+    transition: transform 0.3s ease; /* Smooth scaling effect on hover */
+}
+
+.social-icons ul li a:hover img {
+    transform: scale(1.1); /* Scales the icon on hover */
+}
+
 /*Mobile*/
 @media screen and (max-width: 1200px) {
     /* comes into effect for screens larger than or equal to 481 pixels */
