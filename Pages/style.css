@@ -32,6 +32,7 @@ body {
     flex-direction: column;
     width: 100%;
     margin: 0;
+    background-color: #f1f1f1;
 }
 
 /* Navigation Bar */
@@ -66,7 +67,7 @@ body {
 }
 #nav-bar ul li nav.dropdown-content {
     position: fixed;
-    top: 60px;
+    top: 50;
 }
 #nav-bar ul li nav.dropdown-content::before {
     position: absolute;
@@ -199,19 +200,19 @@ main {
 
 /* Home Content */
 .header2 {
-    margin-top: 25px;
-    margin-bottom: 20px;
+    padding-bottom: 15px;
     justify-content: center;
     text-align: center;
 }
 .section-white {
     background-color: #f1f1f1;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
 }
 .section-gray {
     background-color: #e1e1e1;
-}
-.text-image-chunk {
-    display: flex;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
 }
 
 /* About Us */
@@ -237,6 +238,15 @@ main {
     margin-bottom: 20px;
 }
 
+.text-image-chunk {
+    display: flex;
+}
+
+.text-image-chunk p {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+}
+
 /* Leaders */
 #leaders section {
     margin-bottom: 50px;
@@ -254,6 +264,12 @@ main {
 .leaders-list li span {
     font-size: small;
 }
+.leaders-title {
+    font-size: x-large;
+    text-align: center;
+    margin-top: 10vh;
+    text-decoration: underline;
+}
 #head-mentors ul {
     column-count: 2;
 }
@@ -264,7 +280,7 @@ main {
     column-count: 3;
 }
 #officers ul {
-    column-count: 5;
+    column-count: 4;
 }
 #captains ul {
     column-count: 6;
@@ -313,6 +329,7 @@ main {
 .social-icons ul li a:hover img {
     transform: scale(1.1); /* Scales the icon on hover */
 }
+
 
 /*Mobile*/
 @media screen and (max-width: 1200px) {
@@ -368,18 +385,29 @@ main {
     }
 }
 
-.page-title {
-    font-size: 100px;
-    color: #141415;
-    font-family: OpenSans;
-}
-.Title-Container {
+
+/* Other Pages */
+
+body .Title-Container {
+    font-size: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    height: 100%;
+    margin-top: 7vh;
 }
+
+.page-title {
+    font-size: 60px;
+    color: #141415;
+    font-family: OpenSans;
+}
+
+body .Title-Container #TeamIcon {
+    width: 7%;
+    display: block;
+}
+
 .flex-break {
     flex-basis: 100%;
     height: 0;
@@ -416,6 +444,34 @@ h2 {
     margin: 5px;
 }
 
+.sponsor-tier {
+    font-weight: 500;
+}
+
+#sponsorship-packet{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+#sponsorship-packet p {
+    font-size: 20;
+    font-weight: 500;
+}
+
+.UnderConstruction {
+    font-size: 25;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    display: flex;
+    justify-content: center;
+}
+
 /*@-webkit-keyframes fill {
     0% {
         width: 0%;
@@ -431,3 +487,4 @@ h2 {
         background: rgb(163, 47, 47);
     }
 }*/
+/* build captain, but you don't have final say. you don't have his support (he's gonna say he was right). we don't have time to redesign. we should've gone with a fixed angle at comp only. you cant say you hate our design as a lead coach. going under the stage isn't crucial, but definitely beneficial. lead coach going behind someone's back and throwing the PRESIDENT and captain of design under the bus?!?! that alone loses him credibility. he's willing to shit talk me to you, and you to me. he also shit on mason and matthew. he won't take responsibility for shit. his ego is too big.  */
