@@ -285,6 +285,9 @@ main {
 #captains ul {
     column-count: 6;
 }
+#captains-1 ul {
+    column-count: 3;
+}
 
 /* Footer */
 .footer {
