@@ -3,9 +3,23 @@
         <link
             rel="icon"
             type="image/x-icon"
-            href="./Resources/Favicons/favicon.png"
+            href="/Resources/Favicons/favicon.png"
         />
         <link rel="stylesheet" href="/Pages/style.css" />
+        <script>
+            window.addEventListener("DOMContentLoaded", (event) => {
+                fetch("/Pages/navbar.html")
+                    .then((response) => response.text())
+                    .then((data) => {
+                        document.getElementById("navbar").innerHTML = data;
+                    });
+                fetch("/Pages/socials.html")
+                    .then((response) => response.text())
+                    .then((data) => {
+                        document.getElementById("socials").innerHTML = data;
+                    });
+            });
+        </script>
     </head>
 
     <body>
@@ -34,12 +48,17 @@
                 <li class="nav-button" id="donate-dropdown">
                     <a href="/Pages/Donate.html">Donate</a>
                     <nav class="dropdown-content" id="donate-dropdown-content">
-                        <a class="first-dropdown" href="/index.html"
-                            >General Donation</a
-                        >
-                        <a href="/index.html">Tax Credit</a>
+                        <a class="first-dropdown" href="/Pages/Gen Donate.html">General Donation</a>
+                        <a href="/Pages/Tax credit Dono.html">Tax Credit</a>
                     </nav>
-                </li>
+                    <li class="nav-button" id="Accomplishments-dropdown">
+                        <a href="/index.html">Accomplishments</a>
+                        <nav class="dropdown-content" id="Accomplishments-dropdown-content">
+                            <a class="first-dropdown" href="/Pages/Projects.html">Projects</a>
+                            <a href="/Pages/Awards.html">Awards</a>
+                    </nav>
+                    </li>
+                </nav>
             </ul>
         </nav>
 
@@ -100,20 +119,20 @@
                         <header>
                             <h2 class="header2">Projects</h2>
                         </header>
-                        <section class="text-image-chunk" id="x-2023">
-                            <p id="projects">For the 2023 FRC Charged-Up season, Team Paradise built "X".<br><br>
-                                AZ East - Spirit Award Winner, Alliance Captain<br>
-                                AZ West - Regional Winner<br>
-                                World Championships (Houston, Texas)<br>
+                        <section class="text-image-chunk" id="Rhino-2024">
+                            <p id="projects">For the 2024 FRC CRESCENDO Season, Team Paradise built "The Rhino".<br><br>
+                                Hueneme Port (California)<br>
+                                AZ Valley - Gracious Professionalism Award Winner, Alliance Captain<br>
+                                AZ East - Gracious Professionalism Award Winner, 1st pick of 6th Seed Alliance.<br> 
                             </p>
                             <img
-                                src="/Resources/x-2023.JPG"
-                                id="projects-image-x-2023"
+                                src="/Resources/Rhino-2024.jpg"
+                                id="projects-image-Rhino-2024"
                                 alt="Team Picture"
                             />
                         </section>
                     </section>
-
+                    
                     <!-- Leaders -->
                     <section class="section-white" id="leaders">
                         <header>
@@ -127,7 +146,7 @@
                                     <span> Lead Coach 1 </span>
                                 </li>
                                 <li id="lead-coach-2">
-                                    <div>Melanie Young</div>
+                                    <div>Alex Ruiz</div>
                                     <span> Lead Coach 2 </span>
                                 </li>
                             </ul>
@@ -160,11 +179,6 @@
                                     <div>Ken Whitley</div>
                                     <span> Build </span>
                                 </li>
-                            </ul>
-                        </section>
-
-                        <section id="mentors-2">
-                            <ul class="leaders-list">
                                 <li>
                                     <div>Charlotte Moenich</div>
                                     <span> Administration & Strategy </span>
@@ -184,20 +198,20 @@
                         <section id="officers">
                             <ul class="leaders-list">
                                 <li>
-                                    <div>Justin Friedlander</div>
+                                    <div>Aila Jamakovic</div>
                                     <span> President </span>
                                 </li>
                                 <li>
-                                    <div>Manas Pund</div>
+                                    <div>Aneesa Napoli</div>
                                     <span> Vice President </span>
                                 </li>
                                 <li>
-                                    <div>Bridget Ruble</div>
+                                    <div>Mason Cucci</div>
                                     <span> Treasurer </span>
                                 </li>
                                 <li>
-                                    <div>Aneesa Napoli</div>
-                                    <span> Co-Secretary </span>
+                                    <div>Abby Neil</div>
+                                    <span> Secretary </span>
                                 </li>
                             </ul>
                         </section>
@@ -206,28 +220,48 @@
                         <section id="captains">
                             <ul class="leaders-list">
                                 <li>
-                                    <div>Caden Laughlin</div>
+                                    <div>Alexander Podborny</div>
                                     <span> Captain of Build </span>
                                 </li>
                                 <li>
-                                    <div>James Campos</div>
+                                    <div>Michael Yagodnik</div>
                                     <span> Captain of Design </span>
                                 </li>
                                 <li>
-                                    <div>James Gold</div>
+                                    <div>Andrew McBeath</div>
+                                    <span> Captain of CAD </span>
+                                </li>
+                                <li>
+                                    <div>Anthony Harkins</div>
                                     <span> Captain of Electrical </span>
                                 </li>
                                 <li>
-                                    <div>Arianna Decker</div>
+                                    <div>Bridget Ruble</div>
                                     <span> Captain of Media </span>
                                 </li>
                                 <li>
-                                    <div>James Gold</div>
+                                    <div>Ashton Antila</div>
                                     <span> Captain of Programming </span>
                                 </li>
+                            </ul>
+                        </section>
+                        <section id="captains-1">
+                            <ul class="leaders-list">
                                 <li>
-                                    <div>Jackson Trabue</div>
-                                    <span> Captain of Safety </span>
+                                    <div> Mason Cucci </div>
+                                    <span> Captian of Safety </span>
+                                </li>
+                                <li>
+                                    <div> Kaylynn Decker </div>
+                                    <span> Captain of Organization </span>
+                                </li>
+                                <li>
+                                    <div> Nic Fejfar </div>
+                                    <span> Captain of Scouting </span>
+                                </li>
+                                <li>
+                                    <div> Aneesa Napoli </div>
+                                    <span> Captain of The Arts </span>
                                 </li>
                             </ul>
                         </section>
@@ -235,39 +269,7 @@
                 </section>
 
                 <!-- Footer -->
-                <section class="footer">
-                    <div class="social-icons">
-                        <ul>
-                            <li>
-                                <a
-                                    href="https://www.facebook.com/Team1165"
-                                    target="_blank"
-                                    ><img
-                                        src="/Resources/Facebook.png"
-                                        alt="Facebook"
-                                /></a>
-                            </li>
-                            <li>
-                                <a
-                                    href="mailto:team1165@gmail.com"
-                                    target="_blank"
-                                    ><img
-                                        src="/Resources/Gmail Logo.png"
-                                        alt="Gmail"
-                                /></a>
-                            </li>
-                            <li>
-                                <a
-                                    href="https://www.instagram.com/teamparadise.1165"
-                                    target="_blank"
-                                    ><img
-                                        src="/Resources/Instagram.png"
-                                        alt="Instagram"
-                                /></a>
-                            </li>
-                        </ul>
-                    </div>
-                </section>
+                <div id="socials"></div>
             </section>
         </main>
     </body>
