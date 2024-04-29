@@ -126,6 +126,14 @@ nav.fill ul #donate-dropdown:hover #donate-dropdown-content {
     width: 10%;
 }
 
+/* Show dropdown on hover */
+nav.fill ul #Accomplishments-dropdown:hover #Accomplishments-dropdown-content {
+    display: block;
+    text-align: center;
+    z-index: 110;
+    width: 10%;
+}
+
 nav ul li a,
 nav ul li a:after,
 nav ul li a:before {
