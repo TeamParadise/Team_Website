@@ -302,10 +302,7 @@ main {
 
 #mentors-1 ul,
 #captains ul {
-    grid-template-columns: repeat(3, 1fr); /* 3 columns */
-}
-#captains-1 ul {
-    column-count: 4 ;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
 }
 
 /* Footer */
