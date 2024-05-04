@@ -6,57 +6,20 @@
             href="/Resources/Favicons/favicon.png"
         />
         <link rel="stylesheet" href="/Pages/style.css" />
+        <script>
+            window.addEventListener("DOMContentLoaded", (event) => {
+                fetch("/Pages/navbar.html")
+                    .then((response) => response.text())
+                    .then((data) => {
+                        document.getElementById("navbar").innerHTML = data;
+                    });
+            });
+        </script>
     </head>
 
     <body>
         <!--Navigation Bar-->
-        <nav class="fill" id="nav-bar">
-            <ul>
-                <img
-                    src="/Resources/Black Logo-1.png"
-                    id="nav-logo"
-                    alt="Team 1165 Logo"
-                />
-                <li class="nav-button" id="home-dropdown">
-                    <a href="/index.html">Home</a>
-                    <nav class="dropdown-content" id="home-dropdown-content">
-                        <a class="first-dropdown" href="/index.html"
-                            >Projects</a
-                        >
-                        <a href="/index.html">Leaders</a>
-                    </nav>
-                </li>
-                <li class="nav-button">
-                    <a href="/Pages/calendar.html">Calendar</a>
-                </li>
-                <li class="nav-button">
-                    <a href="/Pages/sponsors.html">Sponsors</a>
-                </li>
-                <li class="nav-button"><a href="/Pages/shop.html">Shop</a></li>
-                <li class="nav-button" id="donate-dropdown">
-                    <a href="/Pages/donate.html">Donate</a>
-                    <nav class="dropdown-content" id="donate-dropdown-content">
-                        <a class="first-dropdown" href="/Pages/gen_donate.html"
-                            >General Donation</a
-                        >
-                        <a href="/Pages/tax_credit_dono.html">Tax Credit</a>
-                    </nav>
-                </li>
-
-                <li class="nav-button" id="Accomplishments-dropdown">
-                    <a href="/index.html">Accomplishments</a>
-                    <nav
-                        class="dropdown-content"
-                        id="Accomplishments-dropdown-content"
-                    >
-                        <a class="first-dropdown" href="/Pages/projects.html"
-                            >Projects</a
-                        >
-                        <a href="/Pages/awards.html">Awards</a>
-                    </nav>
-                </li>
-            </ul>
-        </nav>
+        <div id="navbar"></div>
 
         <!--Background Image + Logo-->
         <header>
