@@ -266,6 +266,7 @@ main {
   list-style: none;
   text-align: center;
   font-family: OpenSans;
+  padding: 1.25rem;
 }
 
 .leaders-list li {
@@ -295,10 +296,12 @@ main {
 
 #head-mentors ul,
 #officers ul {
-  column-count: 4;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
 }
+
+#mentors-1 ul,
 #captains ul {
-  column-count: 6;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
 }
 
 /* Footer */
