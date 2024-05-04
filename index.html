@@ -13,6 +13,11 @@
                     .then((data) => {
                         document.getElementById("navbar").innerHTML = data;
                     });
+                fetch("/Pages/socials.html")
+                    .then((response) => response.text())
+                    .then((data) => {
+                        document.getElementById("socials").innerHTML = data;
+                    });
             });
         </script>
     </head>
@@ -228,39 +233,7 @@
                 </section>
 
                 <!-- Footer -->
-                <section class="footer">
-                    <div class="social-icons">
-                        <ul>
-                            <li>
-                                <a
-                                    href="https://www.facebook.com/Team1165"
-                                    target="_blank"
-                                    ><img
-                                        src="/Resources/Facebook.png"
-                                        alt="Facebook"
-                                /></a>
-                            </li>
-                            <li>
-                                <a
-                                    href="mailto:team1165@gmail.com"
-                                    target="_blank"
-                                    ><img
-                                        src="/Resources/Gmail Logo.png"
-                                        alt="Gmail"
-                                /></a>
-                            </li>
-                            <li>
-                                <a
-                                    href="https://www.instagram.com/teamparadise.1165"
-                                    target="_blank"
-                                    ><img
-                                        src="/Resources/Instagram.png"
-                                        alt="Instagram"
-                                /></a>
-                            </li>
-                        </ul>
-                    </div>
-                </section>
+                <div id="socials"></div>
             </section>
         </main>
     </body>
