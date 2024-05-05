@@ -57,7 +57,8 @@ body {
 #nav-bar ul li {
   display: inline-block;
 }
-#nav-bar ul li a {
+#nav-bar ul li a,
+#nav-bar ul li span {
   display: block;
   padding: 15px;
   text-decoration: none;
@@ -169,6 +170,11 @@ nav.fill ul li a:hover:after {
   -webkit-animation: fill 1s forwards;
   -moz-animation: fill 1s forwards;
   opacity: 1;
+}
+
+nav.fill ul li[tabindex]:hover .dropdown-content,
+nav.fill ul li[tabindex]:focus .dropdown-content {
+  display: block;
 }
 
 main {
@@ -301,7 +307,7 @@ main {
 
 #mentors-1 ul,
 #captains ul {
-  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  grid-template-columns: repeat(2, 1fr); /* 3 columns */
 }
 
 /* Footer */
@@ -505,6 +511,7 @@ h2 {
   display: flex;
   justify-content: center;
 }
+
 /* shop css */
 /* body {
             font-family: Arial, sans-serif;
