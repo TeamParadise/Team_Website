@@ -307,7 +307,7 @@ main {
 
 #mentors-1 ul,
 #captains ul {
-  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  grid-template-columns: repeat(2, 1fr); /* 3 columns */
 }
 
 /* Footer */
@@ -706,4 +706,3 @@ h2 {
         background: rgb(163, 47, 47);
     }
 }*/
-

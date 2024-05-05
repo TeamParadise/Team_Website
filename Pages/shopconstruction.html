@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
     <script src="https://js.stripe.com/v3/"></script>
     <link rel="stylesheet" href="style.css" />
@@ -50,38 +51,135 @@
         </li>
       </ul>
     </nav>
+    <body>
+      <div class="container">
+        <h1>Welcome to Our Online Shop</h1>
+        <div class="products">
+          <div class="product">
+            <img src="hoodie.jpg" alt="Hoodie" />
+            <h2>Hoodies - $45</h2>
+            <label for="hoodie-size">Select Size:</label>
+            <select id="hoodie-size">
+              <option value="Xsmall">XSmall</option>
+              <option value="small">Small</option>
+              <option value="medium">Medium</option>
+              <option value="large">Large</option>
+              <option value="Xlarge">XLarge</option>
+              <option value="XXlarge">XXLarge</option>
+              <option value="XXXlarge">XXXLarge</option>
+            </select>
+            <label for="hoodie-quantity">Quantity:</label>
+            <input
+              type="number"
+              id="hoodie-quantity"
+              name="hoodie-quantity"
+              min="0"
+            />
+          </div>
+          <div class="product">
+            <img src="tshirt.jpg" alt="T-Shirt" />
+            <h2>T-Shirts - $15</h2>
+            <label for="tshirt-size">Select Size:</label>
+            <select id="tshirt-size">
+              <option value="Xsmall">XSmall</option>
+              <option value="small">Small</option>
+              <option value="medium">Medium</option>
+              <option value="large">Large</option>
+              <option value="Xlarge">XLarge</option>
+              <option value="XXlarge">XXLarge</option>
+              <option value="XXXlarge">XXXLarge</option>
+            </select>
+            <label for="tshirt-quantity">Quantity:</label>
+            <input
+              type="number"
+              id="tshirt-quantity"
+              name="tshirt-quantity"
+              min="0"
+            />
+          </div>
+          <button id="checkout-button">Checkout</button>
+          <div class="order-summary">
+            <h2>Your Order Summary:</h2>
+            <p id="order-summary"></p>
+          </div>
+        </div>
 
-    <!-- Body -->
-    <div class="Title-Container">
-      <h1 class="page-title" style="width: 100%; text-align: center">Shop</h1>
-      <img src="/Resources/Icons/team-icon.png" id="TeamIcon" alt="Team Icon" />
-    </div>
+        <script>
+          var stripe = Stripe(
+            "sk_test_51PBMFWCZYaFRUYezJHsiqgp6BHarFfhZjlNkDT8MNnxSOpCe3pDR427dyqYJMmEIF5JRe6aQc16KxHK3euoMZ9de00r03MbmAR"
+          );
+          var checkoutButton = document.getElementById("checkout-button");
+          checkoutButton.addEventListener("click", function () {
+            var hoodieSize = document.getElementById("hoodie-size").value;
+            var hoodieQuantity = parseInt(
+              document.getElementById("hoodie-quantity").value
+            );
+            var tshirtSize = document.getElementById("tshirt-size").value;
+            var tshirtQuantity = parseInt(
+              document.getElementById("tshirt-quantity").value
+            );
+            var totalPrice = hoodieQuantity * 45 + tshirtQuantity * 15;
 
-    <div class="UnderConstruction">This section is under construction...</div>
-
-    <!-- Footer -->
-    <section class="footer">
-      <div class="social-icons">
-        <ul>
-          <li>
-            <a href="https://www.facebook.com/Team1165" target="_blank"
-              ><img src="/Resources/Facebook.png" alt="Facebook"
-            /></a>
-          </li>
-          <li>
-            <a href="mailto:team1165@gmail.com" target="_blank"
-              ><img src="/Resources/Gmail Logo.png" alt="Gmail"
-            /></a>
-          </li>
-          <li>
-            <a
-              href="https://www.instagram.com/teamparadise.1165"
-              target="_blank"
-              ><img src="/Resources/Instagram.png" alt="Instagram"
-            /></a>
-          </li>
-        </ul>
+            // Create a Stripe Checkout session
+            stripe.redirectToCheckout({
+              items: [
+                {
+                  sku: "sku_HOODIE",
+                  quantity: hoodieQuantity,
+                  size: hoodieSize,
+                },
+                {
+                  sku: "sku_TSHIRT",
+                  quantity: tshirtQuantity,
+                  size: tshirtSize,
+                },
+              ],
+              successUrl: "https://yourwebsite.com/success",
+              cancelUrl: "https://yourwebsite.com/cancel",
+              clientReferenceId: "unique_id", // optional
+              payment_method_types: ["card"],
+              mode: "payment",
+              lineItems: [
+                {
+                  quantity: hoodieQuantity,
+                  price: "price_HOODIE",
+                  description: "Hoodie - " + hoodieSize,
+                },
+                {
+                  quantity: tshirtQuantity,
+                  price: "price_TSHIRT",
+                  description: "T-Shirt - " + tshirtSize,
+                },
+              ],
+              submit_type: "pay",
+            });
+          });
+        </script>
+        <!-- Footer -->
+        <section class="footer">
+          <div class="social-icons">
+            <ul>
+              <li>
+                <a href="https://www.facebook.com/Team1165" target="_blank"
+                  ><img src="/Resources/Facebook.png" alt="Facebook"
+                /></a>
+              </li>
+              <li>
+                <a href="mailto:team1165@gmail.com" target="_blank"
+                  ><img src="/Resources/Gmail Logo.png" alt="Gmail"
+                /></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/teamparadise.1165"
+                  target="_blank"
+                  ><img src="/Resources/Instagram.png" alt="Instagram"
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </section>
       </div>
-    </section>
+    </body>
   </body>
 </html>
