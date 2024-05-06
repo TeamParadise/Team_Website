@@ -173,7 +173,7 @@ nav.fill ul li a:hover:after {
 
 nav.fill ul li[tabindex]:hover .dropdown-content,
 nav.fill ul li[tabindex]:focus .dropdown-content {
-  display: block;
+    display: block;
 }
 
 main {
@@ -307,7 +307,7 @@ main {
 
 #mentors-1 ul,
 #captains ul {
-  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
 }
 
 /* Footer */
