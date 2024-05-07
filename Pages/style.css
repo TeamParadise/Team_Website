@@ -315,7 +315,7 @@ main {
     padding-top: 50px;
     background-color: #e1e1e1;
     display: flex;
-}
+}   
 
 .social-icons {
     position: relative;
@@ -329,29 +329,52 @@ main {
     border-radius: 5px; /* Optional, for rounded corners */
 }
 
-.social-icons ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex; /* Displays the icons in a row */
+.icon {
+  display: inline-block;
+  margin: 0 10px;
+  padding: 10px;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.3s ease;
 }
 
-.social-icons ul li {
-    margin-right: 10px; /* Adds some space between icons */
+.icon i {
+  margin-right: 5px;
 }
 
-.social-icons ul li:last-child {
-    margin-right: 0; /* Removes margin from the last icon */
+.icon:hover {
+  background-color: #333;
+  border-color: #fff;
 }
 
-.social-icons ul li a img {
-    width: 30px; /* Adjusts the size of the icons */
-    height: auto;
-    transition: transform 0.3s ease; /* Smooth scaling effect on hover */
+.newsletter {
+  background-color: #007bff;
 }
 
-.social-icons ul li a:hover img {
-    transform: scale(1.1); /* Scales the icon on hover */
+.instagram {
+  background-color: #e4405f;
+}
+
+.facebook {
+  background-color: #3b5998;
+}
+
+.gmail {
+  background-color: #db4437;
+}
+
+.social-icons {
+    position: relative;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px; /* Optional, for rounded corners */
 }
 
 /*Mobile*/
