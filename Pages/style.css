@@ -377,6 +377,13 @@ main {
     border-radius: 5px; /* Optional, for rounded corners */
 }
 
+.instagram .fab {
+    background: #d6249f;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 /*Mobile*/
 @media screen and (max-width: 1200px) {
     /* comes into effect for screens larger than or equal to 481 pixels */
