@@ -333,7 +333,7 @@ main {
     padding-top: 50px;
     background-color: #e1e1e1;
     display: flex;
-}   
+}
 
 .social-icons {
     position: relative;
@@ -348,39 +348,39 @@ main {
 }
 
 .icon {
-  display: inline-block;
-  margin: 0 10px;
-  padding: 10px;
-  border: 2px solid transparent;
-  border-radius: 5px;
-  text-decoration: none;
-  color: #fff;
-  transition: all 0.3s ease;
+    display: inline-block;
+    margin: 0 10px;
+    padding: 10px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.3s ease;
 }
 
 .icon i {
-  margin-right: 5px;
+    margin-right: 5px;
 }
 
 .icon:hover {
-  background-color: #333;
-  border-color: #fff;
+    background-color: #333;
+    border-color: #fff;
 }
 
 .newsletter {
-  background-color: #007bff;
+    background-color: #007bff;
 }
 
 .instagram {
-  background-color: #e4405f;
+    background-color: #e4405f;
 }
 
 .facebook {
-  background-color: #3b5998;
+    background-color: #3b5998;
 }
 
 .gmail {
-  background-color: #db4437;
+    background-color: #db4437;
 }
 
 .social-icons {
@@ -397,7 +397,14 @@ main {
 
 .instagram .fab {
     background: #d6249f;
-    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+    background: radial-gradient(
+        circle at 30% 107%,
+        #fdf497 0%,
+        #fdf497 5%,
+        #fd5949 45%,
+        #d6249f 60%,
+        #285aeb 90%
+    );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }

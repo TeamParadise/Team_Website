@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
         <link
             rel="icon"
@@ -22,29 +23,17 @@
                     });
             });
         </script>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Upload Page</title>
     </head>
-
     <body>
-        <!--Navigation Bar-->
-        <div id="navbar"></div>
+        <h1>Upload Photos and Videos</h1>
+        <form id="uploadForm" enctype="multipart/form-data">
+            <input type="file" name="file" id="fileInput" multiple />
+            <button type="submit">Upload</button>
+        </form>
 
-        <!-- Body -->
-        <div class="Title-Container">
-            <h1 class="page-title" style="width: 100%; text-align: center">
-                Tax Credit
-            </h1>
-            <img
-                src="/Resources/Icons/team-icon.png"
-                id="TeamIcon"
-                alt="Team Icon"
-            />
-        </div>
-
-        <div class="UnderConstruction">
-            This section is under construction...
-        </div>
-
-        <!-- Footer -->
-        <div id="socials"></div>
+        <script src="/Pages/upload.js"></script>
     </body>
 </html>
