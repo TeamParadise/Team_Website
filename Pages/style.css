@@ -12,6 +12,7 @@ html {
 /* width */
 ::-webkit-scrollbar {
     width: 10px;
+    height: 0px;
 }
 
 /* Handle */
@@ -30,7 +31,7 @@ html {
 body {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: calc(100vw);
     margin: 0;
     background-color: #f1f1f1;
 }
@@ -40,10 +41,11 @@ body {
     position: fixed;
     z-index: 110;
     background-color: #f1f1f1;
-    width: 100%;
+    width: calc(100vw);
     border-bottom: 1px solid;
     border-bottom-color: #000;
     margin: 0;
+    font-size: 1rem;
 }
 #nav-bar::after {
     color: #000;
@@ -79,7 +81,7 @@ body {
     content: "";
 }
 #nav-logo {
-    width: 3.5%;
+    width: calc(3.5vw);
     vertical-align: middle;
     padding-right: 30%;
     display: none;
@@ -115,7 +117,7 @@ nav.fill ul #home-dropdown:hover #home-dropdown-content {
     text-align: center;
     font-size: small;
     z-index: 110;
-    width: 10%;
+    width: calc(10vw);
 }
 
 /* Show dropdown on hover */
@@ -123,7 +125,7 @@ nav.fill ul #donate-dropdown:hover #donate-dropdown-content {
     display: block;
     text-align: center;
     z-index: 110;
-    width: 10%;
+    width: calc(10vw);
 }
 
 /* Show dropdown on hover */
@@ -131,7 +133,7 @@ nav.fill ul #Accomplishments-dropdown:hover #Accomplishments-dropdown-content {
     display: block;
     text-align: center;
     z-index: 110;
-    width: 10%;
+    width: calc(10vw);
 }
 
 nav ul li a,
@@ -173,11 +175,11 @@ nav.fill ul li a:hover:after {
 
 nav.fill ul li[tabindex]:hover .dropdown-content,
 nav.fill ul li[tabindex]:focus .dropdown-content {
-  display: block;
+    display: block;
 }
 
 main {
-    padding-top: 25px;
+    width: 100%;
     background-color: #f1f1f1;
     z-index: 100;
 }
@@ -189,21 +191,26 @@ main {
     justify-content: center;
     /*height: calc(100vw*0.664179104);*/
     height: calc(100vh);
+    width: calc(100vw);
 }
 
 .logo-container #Logo-Image {
     position: fixed;
     z-index: 80;
-    width: 50%;
+    width: auto;
+    height: auto;
+    max-width: calc(60vw);
+    max-height: calc(40vh);
 }
 
 .logo-container #Background-Image {
     position: fixed;
     z-index: 50;
-    width: 100%;
-    height: 100%;
+    width: calc(100vw);
+    height: calc(100vh);
     object-fit: cover;
     object-position: bottom;
+    overflow-x: hidden;
 }
 
 #Background-Image {
@@ -230,29 +237,40 @@ main {
 
 /* About Us */
 #about-us-image {
-    padding-left: 10%;
-    padding-right: 10%;
-    width: 35%;
+    width: 80%;
+    max-width: 600px;
+    height: 80%;
+    padding-left: 30px;
+    padding-right: 30px;
 }
+
 #about-us-text {
+    padding-right: 30px;
     text-align: center;
-    padding-right: 5%;
 }
 
 /* Projects */
 #Rhino-2024 {
-    justify-content: right;
+    width: calc(100vw);
 }
 #projects-image-Rhino-2024 {
-    height: 60%;
-    width: calc(60vh * 1.02327961);
-    padding-right: 10%;
-    padding-left: 10%;
+    width: 80%;
+    max-width: 700px;
+    height: 80%;
     margin-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+#projects {
+    text-align: center;
+    padding-left: 30px;
 }
 
 .text-image-chunk {
+    align-items: center;
     display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
 .text-image-chunk p {
@@ -307,7 +325,7 @@ main {
 
 #mentors-1 ul,
 #captains ul {
-  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
 }
 
 /* Footer */
@@ -329,33 +347,70 @@ main {
     border-radius: 5px; /* Optional, for rounded corners */
 }
 
-.social-icons ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex; /* Displays the icons in a row */
+.icon {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 10px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.3s ease;
 }
 
-.social-icons ul li {
-    margin-right: 10px; /* Adds some space between icons */
+.icon i {
+    margin-right: 5px;
 }
 
-.social-icons ul li:last-child {
-    margin-right: 0; /* Removes margin from the last icon */
+.icon:hover {
+    background-color: #333;
+    border-color: #fff;
 }
 
-.social-icons ul li a img {
-    width: 30px; /* Adjusts the size of the icons */
-    height: auto;
-    transition: transform 0.3s ease; /* Smooth scaling effect on hover */
+.newsletter {
+    background-color: #007bff;
 }
 
-.social-icons ul li a:hover img {
-    transform: scale(1.1); /* Scales the icon on hover */
+.instagram {
+    background-color: #e4405f;
+}
+
+.facebook {
+    background-color: #3b5998;
+}
+
+.gmail {
+    background-color: #db4437;
+}
+
+.social-icons {
+    position: relative;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px; /* Optional, for rounded corners */
+}
+
+.instagram .fab {
+    background: #d6249f;
+    background: radial-gradient(
+        circle at 30% 107%,
+        #fdf497 0%,
+        #fdf497 5%,
+        #fd5949 45%,
+        #d6249f 60%,
+        #285aeb 90%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 /*Mobile*/
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1000px) {
     /* comes into effect for screens larger than or equal to 481 pixels */
     .ourStory-Container {
         display: flex;
@@ -381,10 +436,23 @@ main {
         margin-right: 5%;
         font-size: 15px;
     }
+
+    .text-image-chunk {
+        flex-wrap: wrap;
+    }
+
+    #about-us-image {
+        padding-bottom: 30px;
+    }
+
+    #about-us-text, #projects {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 }
 
 /*Desktop*/
-@media screen and (min-width: 1201px) {
+@media screen and (min-width: 1001px) {
     .ourStory-Container {
         display: flex;
         align-items: center;
@@ -408,6 +476,18 @@ main {
     }
 }
 
+@media screen and (max-width: 500px) {
+    #head-mentors ul,
+    #officers ul {
+        grid-template-columns: repeat(1, 1fr); /* 2 columns */
+    }   
+
+    #mentors-1 ul,
+    #captains ul {
+        grid-template-columns: repeat(1, 1fr); /* 2 columns */
+    }
+}
+
 /* Other Pages */
 
 body .Title-Container {
@@ -426,7 +506,8 @@ body .Title-Container {
 }
 
 body .Title-Container #TeamIcon {
-    width: 7%;
+    max-width: 100px;
+    width: 30%;
     display: block;
 }
 
@@ -490,10 +571,11 @@ h2 {
 }
 
 #sponsorship-packet {
-    display: block;
+    display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    flex-direction: column;
     width: 50%;
     margin-left: auto;
     margin-right: auto;
@@ -502,6 +584,10 @@ h2 {
 #sponsorship-packet p {
     font-size: 20;
     font-weight: 500;
+}
+
+#sponsorship-packet iframe {
+    width: 100%;
 }
 
 .UnderConstruction {
