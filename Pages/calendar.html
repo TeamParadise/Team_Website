@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
         <link
             rel="icon"
@@ -7,7 +6,6 @@
             href="/Resources/Favicons/favicon.png"
         />
         <link rel="stylesheet" href="/Pages/style.css" />
-        <script src="https://cdn.tailwindcss.com"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <script>
@@ -26,32 +24,41 @@
         </script>
     </head>
 
-    <body class="flex flex-col min-h-screen">
+    <body>
         <!--Navigation Bar-->
-        <header id="navbar" class="mb-16"></header>
+        <div id="navbar"></div>
 
         <!-- Body -->
-        <main class="flex-grow flex flex-col">
-            <div class="flex justify-center items-center">
-                <h1 class="text-3xl font-bold px-4">Calendar</h1>
-                <img
-                    src="/Resources/Icons/calendar.png"
-                    class="w-20"
-                    alt="Team Icon"
-                />
-            </div>
-            <div class="flex-grow relative overflow-hidden">
-                <iframe
-                    class="absolute top-0 left-0 w-full h-full p-4"
-                    src="https://calendar.google.com/calendar/embed?src=c_classroomf63767d2%40group.calendar.google.com&ctz=America%2FPhoenix"
-                    style="border: 0"
-                    frameborder="0"
-                    scrolling="no"
-                ></iframe>
-            </div>
-        </main>
+        <div class="Title-Container">
+            <h1 class="page-title" style="width: 100%; text-align: center">
+                Calendar
+            </h1>
+            <img
+                src="/Resources/Icons/calendar.png"
+                id="TeamIcon"
+                alt="Team Icon"
+            />
+        </div>
+        <div
+            style="
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                padding-top: 10%;
+                padding-bottom: 8%;
+            "
+        >
+            <iframe
+                src="https://calendar.google.com/calendar/embed?src=c_classroomf63767d2%40group.calendar.google.com&ctz=America%2FPhoenix"
+                style="border-width: 0"
+                width="800"
+                height="600"
+                frameborder="0"
+                scrolling="no"
+            ></iframe>
+        </div>
 
         <!-- Footer -->
-        <footer id="socials"></footer>
+        <div id="socials"></div>
     </body>
 </html>
