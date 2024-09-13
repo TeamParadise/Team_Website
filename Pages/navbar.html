@@ -1,46 +1,109 @@
 <body>
-    <nav class="fill" id="nav-bar">
-        <ul>
-            <img
-                src="/Resources/Black Logo-1.png"
-                id="nav-logo"
-                alt="Team 1165 Logo"
-            />
-            <li class="nav-button" id="home-dropdown">
-                <a href="/index.html">Home</a>
-                <nav class="dropdown-content" id="home-dropdown-content">
-                    <a class="first-dropdown" href="/index.html">Projects</a>
-                    <a href="/index.html">Leaders</a>
-                </nav>
+    <!-- Navbar -->
+    <nav
+        id="nav-bar"
+        class="fixed top-0 left-0 w-full bg-gray-100 border-b border-black text-sm z-50"
+    >
+        <ul
+            class="flex flex-wrap justify-center items-center m-0 p-0 list-none"
+        >
+            <li>
+                <img
+                    src="/Resources/Black Logo-1.png"
+                    id="nav-logo"
+                    alt="Team 1165 Logo"
+                    class="hidden md:inline w-[3.5vw] pr-[30%] align-middle"
+                />
             </li>
-            <li class="nav-button">
-                <a href="/Pages/calendar.html">Calendar</a>
-            </li>
-            <li class="nav-button">
-                <a href="/Pages/sponsors.html">Sponsors</a>
-            </li>
-            <li class="nav-button"><a href="/Pages/shop.html">Shop</a></li>
-            <li class="nav-button" id="donate-dropdown">
-                <a href="/Pages/donate.html">Donate</a>
-                <nav class="dropdown-content" id="donate-dropdown-content">
-                    <a class="first-dropdown" href="/Pages/gen_donate.html"
-                        >General Donation</a
-                    >
-                    <a href="/Pages/tax_credit_dono.html">Tax Credit</a>
-                </nav>
-            </li>
-
-            <li class="nav-button" id="Accomplishments-dropdown">
-                <a href="/index.html">Accomplishments</a>
-                <nav
-                    class="dropdown-content"
-                    id="Accomplishments-dropdown-content"
+            <li class="relative group">
+                <a
+                    href="/index.html"
+                    class="block p-2 md:p-4 text-xs md:text-sm lg:text-base text-black font-extrabold uppercase transition-all duration-200 ease-in-out hover:text-c3153a break-words whitespace-normal"
                 >
-                    <a class="first-dropdown" href="/Pages/projects.html"
+                    Home
+                </a>
+                <div
+                    class="absolute left-0 top-full hidden group-hover:block bg-white border border-gray-300 text-center text-sm z-50"
+                >
+                    <a
+                        href="/index.html"
+                        class="block px-4 py-2 text-gray-900 hover:text-black"
                         >Projects</a
                     >
-                    <a href="/Pages/awards.html">Awards</a>
-                </nav>
+                    <a
+                        href="/index.html"
+                        class="block px-4 py-2 text-gray-900 hover:text-black"
+                        >Leaders</a
+                    >
+                </div>
+            </li>
+            <li class="relative group">
+                <a
+                    href="/Pages/calendar.html"
+                    class="block p-2 md:p-4 text-xs md:text-sm lg:text-base text-black font-extrabold uppercase transition-all duration-200 ease-in-out hover:text-c3153a break-words whitespace-normal"
+                >
+                    Calendar
+                </a>
+            </li>
+            <li class="relative group">
+                <a
+                    href="/Pages/sponsors.html"
+                    class="block p-2 md:p-4 text-xs md:text-sm lg:text-base text-black font-extrabold uppercase transition-all duration-200 ease-in-out hover:text-c3153a break-words whitespace-normal"
+                >
+                    Sponsors
+                </a>
+            </li>
+            <li class="relative group">
+                <a
+                    href="/Pages/shop.html"
+                    class="block p-2 md:p-4 text-xs md:text-sm lg:text-base text-black font-extrabold uppercase transition-all duration-200 ease-in-out hover:text-c3153a break-words whitespace-normal"
+                >
+                    Shop
+                </a>
+            </li>
+            <li class="relative group">
+                <a
+                    href="/Pages/donate.html"
+                    class="block p-2 md:p-4 text-xs md:text-sm lg:text-base text-black font-extrabold uppercase transition-all duration-200 ease-in-out hover:text-c3153a break-words whitespace-normal"
+                >
+                    Donate
+                </a>
+                <div
+                    class="absolute left-0 top-full hidden group-hover:block bg-white border border-gray-300 text-center text-sm z-50"
+                >
+                    <a
+                        href="/Pages/gen_donate.html"
+                        class="block px-4 py-2 text-gray-900 hover:text-black"
+                        >General Donation</a
+                    >
+                    <a
+                        href="/Pages/tax_credit_dono.html"
+                        class="block px-4 py-2 text-gray-900 hover:text-black"
+                        >Tax Credit</a
+                    >
+                </div>
+            </li>
+            <li class="relative group">
+                <a
+                    href="/index.html"
+                    class="block p-2 md:p-4 text-xs md:text-sm lg:text-base text-black font-extrabold uppercase transition-all duration-200 ease-in-out hover:text-c3153a break-words whitespace-normal"
+                >
+                    Accomplishments
+                </a>
+                <div
+                    class="absolute left-0 top-full hidden group-hover:block bg-white border border-gray-300 text-center text-sm z-50"
+                >
+                    <a
+                        href="/Pages/projects.html"
+                        class="block px-4 py-2 text-gray-900 hover:text-black"
+                        >Projects</a
+                    >
+                    <a
+                        href="/Pages/awards.html"
+                        class="block px-4 py-2 text-gray-900 hover:text-black"
+                        >Awards</a
+                    >
+                </div>
             </li>
         </ul>
     </nav>

@@ -36,152 +36,10 @@ body {
     background-color: #f1f1f1;
 }
 
-/* Navigation Bar */
-#nav-bar {
-    position: fixed;
-    z-index: 110;
-    background-color: #f1f1f1;
-    width: calc(100vw);
-    border-bottom: 1px solid;
-    border-bottom-color: #000;
-    margin: 0;
-    font-size: 1rem;
-}
-#nav-bar::after {
-    color: #000;
-}
-#nav-bar ul {
-    list-style: none;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-}
-#nav-bar ul li {
-    display: inline-block;
-}
-#nav-bar ul li a {
-    display: block;
-    padding: 15px;
-    text-decoration: none;
-    color: #141415;
-    font-weight: 800;
-    text-transform: uppercase;
-}
-#nav-bar ul li nav.dropdown-content {
-    position: fixed;
-    top: 50;
-}
-#nav-bar ul li nav.dropdown-content::before {
-    position: absolute;
-    left: 50%;
-    top: auto;
-    width: 0;
-    height: 0;
-    border: solid transparent;
-    content: "";
-}
-#nav-logo {
-    width: calc(3.5vw);
-    vertical-align: middle;
-    padding-right: 30%;
-    display: none;
-}
-
-nav.fill ul .nav-button {
-    justify-content: right;
-}
-
-/* Hide Dropdown */
-nav.fill ul .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    border-color: #000;
-    border: 1px solid;
-    z-index: 110;
-}
-
-/* Dropdown Text */
-nav.fill ul .dropdown-content a {
-    color: #f1f1f1;
-}
-
-/* Hover over dropdown text */
-nav.fill ul .dropdown-content a:hover {
-    color: #000;
-}
-
-/* Show dropdown on hover */
-nav.fill ul #home-dropdown:hover #home-dropdown-content {
-    display: block;
-    text-align: center;
-    font-size: small;
-    z-index: 110;
-    width: calc(10vw);
-}
-
-/* Show dropdown on hover */
-nav.fill ul #donate-dropdown:hover #donate-dropdown-content {
-    display: block;
-    text-align: center;
-    z-index: 110;
-    width: calc(10vw);
-}
-
-/* Show dropdown on hover */
-nav.fill ul #Accomplishments-dropdown:hover #Accomplishments-dropdown-content {
-    display: block;
-    text-align: center;
-    z-index: 110;
-    width: calc(10vw);
-}
-
-nav ul li a,
-nav ul li a:after,
-nav ul li a:before {
-    transition: all 0.2s;
-}
-nav ul li a:hover {
-    color: #000000;
-}
-
-nav.fill ul li a:after {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 0%;
-    content: ".";
-    margin: 0;
-    opacity: 0;
-    color: transparent;
-    background: #aaa;
-    height: 1px;
-}
-nav.fill ul li a {
-    transition: all 1s;
-}
-nav.fill ul li a:hover {
-    color: #c3153a;
-    z-index: 1;
-}
-nav.fill ul li a:hover:after {
-    z-index: -10;
-    animation: fill 0.5s forwards;
-    -webkit-animation: fill 1s forwards;
-    -moz-animation: fill 1s forwards;
-    opacity: 1;
-}
-
-nav.fill ul li[tabindex]:hover .dropdown-content,
-nav.fill ul li[tabindex]:focus .dropdown-content {
-    display: block;
-}
-
 main {
     width: 100%;
     background-color: #f1f1f1;
-    z-index: 100;
+    z-index: 10;
 }
 
 /* Logo + Background Image */
@@ -196,7 +54,7 @@ main {
 
 .logo-container #Logo-Image {
     position: fixed;
-    z-index: 80;
+    z-index: 0;
     width: auto;
     height: auto;
     max-width: calc(60vw);
@@ -205,7 +63,7 @@ main {
 
 .logo-container #Background-Image {
     position: fixed;
-    z-index: 50;
+    z-index: 0;
     width: calc(100vw);
     height: calc(100vh);
     object-fit: cover;
@@ -340,7 +198,7 @@ main {
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 1000;
+    z-index: 30;
     background: #fff;
     border: 1px solid #ccc;
     padding: 10px;
@@ -388,7 +246,7 @@ main {
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 1000;
+    z-index: 30;
     background: #fff;
     border: 1px solid #ccc;
     padding: 10px;
@@ -445,7 +303,8 @@ main {
         padding-bottom: 30px;
     }
 
-    #about-us-text, #projects {
+    #about-us-text,
+    #projects {
         padding-left: 20px;
         padding-right: 20px;
     }
@@ -480,7 +339,7 @@ main {
     #head-mentors ul,
     #officers ul {
         grid-template-columns: repeat(1, 1fr); /* 2 columns */
-    }   
+    }
 
     #mentors-1 ul,
     #captains ul {
