@@ -26,24 +26,39 @@
         </script>
     </head>
 
-    <body>
+    <body class="flex flex-col min-h-screen">
         <!--Navigation Bar-->
-        <div id="navbar"></div>
+        <header id="navbar" class="mb-16"></header>
 
         <!-- Body -->
-        <div class="Title-Container">
-            <h1 class="page-title" style="width: 100%; text-align: center">
-                Shop
-            </h1>
-            <img
-                src="/Resources/Icons/team-icon.png"
-                id="TeamIcon"
-                alt="Team Icon"
-            />
-        </div>
+        <main class="flex-grow flex flex-col">
+            <div class="flex justify-center items-center">
+                <h1 class="text-3xl font-bold px-4">Shop</h1>
+                <img
+                    src="/Resources/Icons/team-icon.png"
+                    class="w-20"
+                    alt="Team Icon"
+                />
+            </div>
 
-        <div class="UnderConstruction">
-            This section is under construction...
+        <div
+            style="
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                padding-top: 5%;
+                padding-bottom: 8%;
+            "
+        >
+            <iframe
+                title="Donation form powered by Zeffy"
+                style="border-width: 0"
+                width="800"
+                height="600"
+                src="https://www.zeffy.com/embed/ticketing/78ec0d8d-12a7-4f4a-9b97-7c9beea43fd5"
+                allowpaymentrequest
+                allowTransparency="true"
+            ></iframe>
         </div>
 
         <!-- Footer -->

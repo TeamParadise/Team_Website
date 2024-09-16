@@ -54,7 +54,7 @@ main {
 
 .logo-container #Logo-Image {
     position: fixed;
-    z-index: 0;
+    z-index: 1;
     width: auto;
     height: auto;
     max-width: calc(60vw);
