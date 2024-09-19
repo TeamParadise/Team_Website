@@ -40,26 +40,32 @@
                     alt="Team Icon"
                 />
             </div>
-
-        <div
-            style="
-                display: flex;
-                justify-content: center;
-                text-align: center;
-                padding-top: 5%;
-                padding-bottom: 8%;
-            "
-        >
-            <iframe
-                title="Donation form powered by Zeffy"
-                style="border-width: 0"
-                width="800"
-                height="600"
-                src="https://www.zeffy.com/embed/ticketing/78ec0d8d-12a7-4f4a-9b97-7c9beea43fd5"
-                allowpaymentrequest
-                allowTransparency="true"
-            ></iframe>
-        </div>
+            <div class="flex-grow relative overflow-auto">
+                <iframe
+                    class="w-full p-4"
+                    src="https://www.zeffy.com/embed/ticketing/78ec0d8d-12a7-4f4a-9b97-7c9beea43fd5"
+                    style="border: 0; overflow: hidden"
+                    frameborder="0"
+                    allowpaymentrequest
+                    allowTransparency="true"
+                    id="shopIframe"
+                ></iframe>
+            </div>
+            <script>
+                const iframe = document.getElementById("shopIframe");
+                iframe.onload = function () {
+                    setIframeHeight();
+                    // Optionally, recheck the height every 1 second (1000ms) if the content might change dynamically.
+                    setInterval(setIframeHeight, 1000);
+                };
+                function setIframeHeight() {
+                    const iframeDocument =
+                        iframe.contentDocument || iframe.contentWindow.document;
+                    iframe.style.height =
+                        iframeDocument.documentElement.scrollHeight + "px";
+                }
+            </script>
+        </main>
 
         <!-- Footer -->
         <div id="socials"></div>

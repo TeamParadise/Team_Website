@@ -266,7 +266,15 @@ main {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+#shopIframe {
+    width: 100%;
+    border: none;
+}
 
+#iframeContainer {
+    height: 100%;
+    overflow: auto;
+}
 /*Mobile*/
 @media screen and (max-width: 1000px) {
     /* comes into effect for screens larger than or equal to 481 pixels */
