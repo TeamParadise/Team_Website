@@ -24,6 +24,18 @@
                     });
             });
         </script>
+        <style>
+            #iframeContainer {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh; /* Full viewport height */
+            }
+            #zeffyIframe {
+                width: 80vw; /* 50% of the viewport width */
+                height: 90vh; /* 50% of the viewport height */
+            }
+        </style>
     </head>
 
     <body class="flex flex-col min-h-screen">
@@ -51,20 +63,6 @@
                     allowTransparency="true"
                 ></iframe>
             </div>
-            <script>
-                const iframe = document.getElementById("shopIframe");
-                iframe.onload = function () {
-                    setIframeHeight();
-                    // Optionally, recheck the height every 1 second (1000ms) if the content might change dynamically.
-                    setInterval(setIframeHeight, 1000);
-                };
-                function setIframeHeight() {
-                    const iframeDocument =
-                        iframe.contentDocument || iframe.contentWindow.document;
-                    iframe.style.height =
-                        iframeDocument.documentElement.scrollHeight + "px";
-                }
-            </script>
         </main>
 
         <!-- Footer -->
