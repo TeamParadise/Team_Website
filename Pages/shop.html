@@ -26,25 +26,46 @@
         </script>
     </head>
 
-    <body>
+    <body class="flex flex-col min-h-screen">
         <!--Navigation Bar-->
-        <div id="navbar"></div>
+        <header id="navbar" class="mb-16"></header>
 
         <!-- Body -->
-        <div class="Title-Container">
-            <h1 class="page-title" style="width: 100%; text-align: center">
-                Shop
-            </h1>
-            <img
-                src="/Resources/Icons/team-icon.png"
-                id="TeamIcon"
-                alt="Team Icon"
-            />
-        </div>
-
-        <div class="UnderConstruction">
-            This section is under construction...
-        </div>
+        <main class="flex-grow flex flex-col">
+            <div class="flex justify-center items-center">
+                <h1 class="text-3xl font-bold px-4">Shop</h1>
+                <img
+                    src="/Resources/Icons/team-icon.png"
+                    class="w-20"
+                    alt="Team Icon"
+                />
+            </div>
+            <div class="flex-grow relative overflow-auto" id="iframeContainer">
+                <iframe
+                    id="zeffyIframe"
+                    class="w-full p-4"
+                    src="https://www.zeffy.com/embed/ticketing/78ec0d8d-12a7-4f4a-9b97-7c9beea43fd5"
+                    style="border: 0; overflow: hidden"
+                    frameborder="0"
+                    allowpaymentrequest
+                    allowTransparency="true"
+                ></iframe>
+            </div>
+            <script>
+                const iframe = document.getElementById("shopIframe");
+                iframe.onload = function () {
+                    setIframeHeight();
+                    // Optionally, recheck the height every 1 second (1000ms) if the content might change dynamically.
+                    setInterval(setIframeHeight, 1000);
+                };
+                function setIframeHeight() {
+                    const iframeDocument =
+                        iframe.contentDocument || iframe.contentWindow.document;
+                    iframe.style.height =
+                        iframeDocument.documentElement.scrollHeight + "px";
+                }
+            </script>
+        </main>
 
         <!-- Footer -->
         <div id="socials"></div>
