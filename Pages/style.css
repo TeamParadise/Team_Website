@@ -54,7 +54,7 @@ main {
 
 .logo-container #Logo-Image {
     position: fixed;
-    z-index: 0;
+    z-index: 1;
     width: auto;
     height: auto;
     max-width: calc(60vw);
@@ -230,7 +230,7 @@ main {
 }
 
 .instagram {
-    background-color: #e4405f;
+    background-color: #222332;
 }
 
 .facebook {
@@ -266,7 +266,15 @@ main {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+#shopIframe {
+    width: 100%;
+    border: none;
+}
 
+#iframeContainer {
+    height: 100%;
+    overflow: auto;
+}
 /*Mobile*/
 @media screen and (max-width: 1000px) {
     /* comes into effect for screens larger than or equal to 481 pixels */
