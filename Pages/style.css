@@ -81,6 +81,9 @@ main {
     padding-bottom: 15px;
     justify-content: center;
     text-align: center;
+    font-weight:bold;
+    text-decoration: underline;
+    font-size: xx-large;
 }
 .section-white {
     background-color: #f1f1f1;
@@ -170,10 +173,12 @@ main {
 }
 
 .leaders-title {
-    font-size: x-large;
+    padding-bottom: 15px;
+    justify-content: center;
     text-align: center;
-    margin-top: 10vh;
+    font-weight:bold;
     text-decoration: underline;
+    font-size: xx-large;
 }
 
 #head-mentors ul,
@@ -458,9 +463,10 @@ h2 {
 }
 
 .UnderConstruction {
-    font-size: 25;
-    margin-top: 10vh;
-    margin-bottom: 10vh;
+    font-size: 200;
+    margin-top: auto;
+    margin-bottom: auto;
     display: flex;
     justify-content: center;
+    font-weight: bold;
 }
