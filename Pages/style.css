@@ -1,3 +1,16 @@
+:root {
+    /* light mode*/
+    --bg-color: #f1f1f1;
+    --b-secondary: #e1e1e1;
+    --bg-tertiary: #e0e0e0;
+    --bg-card: #f9fafb;
+    --text-primary: #000000;
+    --text-secondary: #141415;
+    --border-color: #e5e7eb;
+    --border-dark: #ccc;
+    --scrollbar-thumb: #c0c0c0;
+    --scrollbar-hover: #000000;
+}
 @font-face {
     font-family: OpenSans;
     src: url("../Resources/openSans.ttf");
@@ -81,7 +94,7 @@ main {
     padding-bottom: 15px;
     justify-content: center;
     text-align: center;
-    font-weight:bold;
+    font-weight: bold;
     text-decoration: underline;
     font-size: xx-large;
 }
@@ -135,8 +148,17 @@ main {
 }
 
 .text-image-chunk p {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Oxygen,
+        Ubuntu,
+        Cantarell,
+        "Open Sans",
+        "Helvetica Neue",
         sans-serif;
 }
 
@@ -176,7 +198,7 @@ main {
     padding-bottom: 15px;
     justify-content: center;
     text-align: center;
-    font-weight:bold;
+    font-weight: bold;
     text-decoration: underline;
     font-size: xx-large;
 }
