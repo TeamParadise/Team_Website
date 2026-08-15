@@ -47,6 +47,23 @@ for (const file of htmlFiles) {
         problems.push(`${relativeName}: duplicate id "${id}"`);
     }
 
+    // Image dimensions stop the layout jumping while an image downloads.
+    for (const match of liveSource.matchAll(/<img\b[^>]*>/g)) {
+        const image = match[0];
+        if (!/\bwidth=["'][^"']+["']/.test(image)) {
+            problems.push(`${relativeName}: image is missing a width`);
+        }
+        if (!/\bheight=["'][^"']+["']/.test(image)) {
+            problems.push(`${relativeName}: image is missing a height`);
+        }
+    }
+
+    for (const match of liveSource.matchAll(/<iframe\b[^>]*>/g)) {
+        if (!/\btitle=["'][^"']+["']/.test(match[0])) {
+            problems.push(`${relativeName}: iframe is missing a title`);
+        }
+    }
+
     if (fragmentNames.has(relativeName.split("/").at(-1))) continue;
 
     const requiredPatterns = [

@@ -21,16 +21,32 @@
         <!--Background Image + Logo-->
         <div>
             <section class="logo-container">
-                <img
-                    src="/Resources/ParadiseLogo.png"
-                    id="Logo-Image"
-                    alt="Team Paradise, FIRST Robotics Competition Team 1165"
-                />
-                <img
-                    src="/Resources/Homepage-Picture.jpg"
-                    id="Background-Image"
-                    alt=""
-                />
+                <!-- WebP keeps the hero sharp while avoiding multi-megabyte downloads. -->
+                <picture class="hero-logo">
+                    <source srcset="/Resources/ParadiseLogo.webp" type="image/webp" />
+                    <img
+                        src="/Resources/ParadiseLogo.png"
+                        id="Logo-Image"
+                        width="1200"
+                        height="840"
+                        alt="Team Paradise, FIRST Robotics Competition Team 1165"
+                        decoding="async"
+                    />
+                </picture>
+                <picture class="hero-background">
+                    <source
+                        srcset="/Resources/Homepage-Picture.webp"
+                        type="image/webp"
+                    />
+                    <img
+                        src="/Resources/Homepage-Picture.jpg"
+                        id="Background-Image"
+                        width="1920"
+                        height="1275"
+                        alt=""
+                        fetchpriority="high"
+                    />
+                </picture>
             </section>
         </div>
 
@@ -44,11 +60,21 @@
                             <h2 class="header2">About Us</h2>
                         </header>
                         <div class="text-image-chunk" id="about-us">
-                            <img
-                                src="/Resources/Team Photo 2025.JPG"
-                                id="about-us-image"
-                                alt="Picture of the Team in 2025"
-                            />
+                            <picture class="about-us-picture">
+                                <source
+                                    srcset="/Resources/Team Photo 2025.webp"
+                                    type="image/webp"
+                                />
+                                <img
+                                    src="/Resources/Team Photo 2025.JPG"
+                                    id="about-us-image"
+                                    width="1600"
+                                    height="1067"
+                                    alt="Team Paradise members at a 2025 event"
+                                    loading="lazy"
+                                    decoding="async"
+                                />
+                            </picture>
                             <p id="about-us-text">
                                 Our team&apos;s annual goal is to create a team
                                 of excited students that bring academic
@@ -87,7 +113,11 @@
                             <img
                                 src="/Resources/Rhino-2024.jpg"
                                 id="projects-image-Rhino-2024"
+                                width="1161"
+                                height="673"
                                 alt="Photo of the 2024 Robot Nicknamed Rhino"
+                                loading="lazy"
+                                decoding="async"
                             />
                         </section>
                     </section>

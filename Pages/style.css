@@ -13,11 +13,14 @@
     --border-dark: #ccc;
     --scrollbar-thumb: #c0c0c0;
     --scrollbar-hover: #000000;
+    --brand: #a70f30;
 }
 @font-face {
     /* The font file is stored locally, so the page does not depend on a font CDN. */
     font-family: OpenSans;
-    src: url("../Resources/openSans.ttf");
+    src:
+        url("../Resources/openSans.woff2") format("woff2"),
+        url("../Resources/openSans.ttf") format("truetype");
     font-display: swap;
 }
 
@@ -52,6 +55,7 @@ body {
     margin: 0;
     background-color: var(--bg-color);
     color: var(--text-primary);
+    line-height: 1.6;
 }
 
 main {
@@ -143,7 +147,7 @@ iframe:focus-visible {
 
 .nav-link:hover,
 .nav-link:focus-visible {
-    color: #a70f30;
+    color: var(--brand);
 }
 
 /* These menu rules are ready for the commented future navigation items. */
@@ -264,20 +268,35 @@ iframe:focus-visible {
     width: 100%;
 }
 
-.logo-container #Logo-Image {
+.hero-logo {
     position: fixed;
     z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}
+
+.logo-container #Logo-Image {
     width: auto;
     height: auto;
     max-width: 60vw;
     max-height: 40vh;
 }
 
+.hero-background,
 .logo-container #Background-Image {
     position: fixed;
     z-index: 0;
     width: 100vw;
     height: 100vh;
+}
+
+.hero-background {
+    display: block;
+}
+
+.logo-container #Background-Image {
     object-fit: cover;
     object-position: bottom;
     overflow-x: hidden;
@@ -285,22 +304,26 @@ iframe:focus-visible {
 
 /* Home-page content sections */
 .header2 {
-    padding-bottom: 15px;
+    padding-bottom: 0.75rem;
     justify-content: center;
     text-align: center;
     font-weight: bold;
+    color: var(--text-secondary);
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
     text-decoration: underline;
-    font-size: xx-large;
+    text-decoration-color: var(--brand);
+    text-decoration-thickness: 0.12rem;
+    text-underline-offset: 0.35rem;
 }
 .section-white {
     background-color: #f1f1f1;
-    padding-top: 5vh;
-    padding-bottom: 5vh;
+    padding-top: clamp(3rem, 7vh, 5rem);
+    padding-bottom: clamp(3rem, 7vh, 5rem);
 }
 .section-gray {
     background-color: #e1e1e1;
-    padding-top: 5vh;
-    padding-bottom: 5vh;
+    padding-top: clamp(3rem, 7vh, 5rem);
+    padding-bottom: clamp(3rem, 7vh, 5rem);
 }
 
 /* About Us */
@@ -326,6 +349,7 @@ iframe:focus-visible {
     max-width: 42rem;
     padding-right: 30px;
     text-align: center;
+    font-size: 1.05rem;
 }
 
 /* Projects */
@@ -335,10 +359,11 @@ iframe:focus-visible {
 #projects-image-Rhino-2024 {
     width: 80%;
     max-width: 700px;
-    height: 80%;
+    height: auto;
     margin-bottom: 20px;
     padding-left: 30px;
     padding-right: 30px;
+    border-radius: 0.75rem;
 }
 #projects {
     text-align: center;
@@ -350,21 +375,11 @@ iframe:focus-visible {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-}
-
-.text-image-chunk p {
-    font-family:
-        system-ui,
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Roboto,
-        Oxygen,
-        Ubuntu,
-        Cantarell,
-        "Open Sans",
-        "Helvetica Neue",
-        sans-serif;
+    gap: 2rem;
+    max-width: 75rem;
+    padding: 0 1.25rem;
+    margin: 0 auto;
+    box-sizing: border-box;
 }
 
 /* Team member cards */
@@ -375,6 +390,8 @@ iframe:focus-visible {
     text-align: center;
     font-family: OpenSans, Arial, sans-serif;
     padding: 1.25rem;
+    max-width: 75rem;
+    margin: 0 auto;
 }
 
 .leaders-list li {
@@ -400,8 +417,8 @@ iframe:focus-visible {
     justify-content: center;
     text-align: center;
     font-weight: bold;
-    text-decoration: underline;
-    font-size: xx-large;
+    color: var(--brand);
+    font-size: clamp(1.4rem, 3vw, 2rem);
 }
 
 #head-mentors ul,
@@ -421,7 +438,7 @@ iframe:focus-visible {
     justify-content: center;
     gap: 0.75rem;
     z-index: 30;
-    padding: 1.5rem 1rem;
+    padding: 2rem 1rem;
     background: var(--b-secondary);
     border-top: 1px solid var(--border-dark);
 }
@@ -430,7 +447,7 @@ iframe:focus-visible {
     display: inline-block;
     padding: 0.75rem 1rem;
     border: 2px solid transparent;
-    border-radius: 5px;
+    border-radius: 0.6rem;
     text-decoration: none;
     color: #fff;
     transition: background-color 0.2s ease, border-color 0.2s ease;
@@ -544,7 +561,7 @@ h2 {
     align-items: center;
     text-align: center;
     flex-direction: column;
-    width: 50%;
+    width: min(90%, 56rem);
     margin-left: auto;
     margin-right: auto;
 }
@@ -565,6 +582,8 @@ h2 {
     display: flex;
     justify-content: center;
     font-weight: bold;
+    padding: 2rem;
+    text-align: center;
 }
 
 #mc_embed_signup {

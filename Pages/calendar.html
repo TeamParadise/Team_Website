@@ -14,7 +14,14 @@
         <main id="main-content" class="page-main" tabindex="-1">
             <div class="page-heading">
                 <h1>Calendar</h1>
-                <img src="/Resources/Icons/calendar.png" class="page-heading-icon" alt="" />
+                <img
+                    src="/Resources/Icons/calendar.png"
+                    class="page-heading-icon"
+                    width="200"
+                    height="200"
+                    alt=""
+                    decoding="async"
+                />
             </div>
             <div class="calendar-container">
                 <!-- Google hosts the calendar; the title names it for screen readers. -->
@@ -22,6 +29,7 @@
                     title="Team Paradise Google Calendar"
                     class="calendar-frame"
                     src="https://calendar.google.com/calendar/embed?src=c_classroomf63767d2%40group.calendar.google.com&amp;ctz=America%2FPhoenix"
+                    loading="lazy"
                 ></iframe>
             </div>
         </main>
