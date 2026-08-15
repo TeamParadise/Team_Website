@@ -1,87 +1,40 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
     <head>
-        <link
-            rel="icon"
-            type="image/x-icon"
-            href="/Resources/Favicons/favicon.png"
-        />
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Donate | Team Paradise 1165</title>
+        <link rel="icon" href="/Resources/Favicons/favicon.png" />
         <link rel="stylesheet" href="/Pages/style.css" />
         <script src="https://cdn.tailwindcss.com"></script>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-        <script>
-            window.addEventListener("DOMContentLoaded", (event) => {
-                fetch("/Pages/navbar.html")
-                    .then((response) => response.text())
-                    .then((data) => {
-                        document.getElementById("navbar").innerHTML = data;
-                    });
-                fetch("/Pages/socials.html")
-                    .then((response) => response.text())
-                    .then((data) => {
-                        document.getElementById("socials").innerHTML = data;
-                    });
-            });
-        </script>
+        <script src="/Pages/site.js" defer></script>
     </head>
-
     <body class="flex flex-col min-h-screen">
-        <!--Navigation Bar-->
-        <header id="navbar" class="mb-16"></header>
-
-        <!-- Body -->
-        <main class="flex-grow flex flex-col">
+        <a class="skip-link" href="#main-content">Skip to main content</a>
+        <header id="navbar" class="mb-16" aria-label="Site header" aria-busy="true"></header>
+        <main id="main-content" class="flex-grow flex flex-col" tabindex="-1">
             <div class="flex justify-center items-center">
                 <h1 class="text-3xl font-bold px-4">Donate</h1>
-                <img
-                    src="/Resources/Icons/Pencil-icon.png"
-                    class="w-20"
-                    alt="Team Icon"
-                />
+                <img src="/Resources/Icons/Pencil-icon.png" class="w-20" alt="" />
             </div>
+            <p class="UnderConstruction">This section is under construction.</p>
 
-        <div class="UnderConstruction">
-            This section is under construction...
-        </div>
+            <!--
+                Future Stripe donation notes:
+                - Let people choose a set amount or enter their own.
+                - The server creates Checkout Sessions and keeps the secret key.
+                - Only count a donation after checking Stripe's signed webhook.
+                - Explain whether donations are tax-deductible and who to contact.
 
-        <!-- <div class="divider">
-            <hr />
-            <h1
-                style="
-                    display: flex;
-                    justify-content: center;
-                    text-align: center;">
-                Resources
-            </h1>
-            <hr />
-        </div>
-        <div
-            style="margin: auto; width: 80%; color: #f1f1f1; text-align: center"
-        >
-            
-            <a href="https://venmo.com/u/Gina-DisipioParrish"class="button"
-                >Thank you for your support to our team! Use our Venmo link here to make your donation.If you have any questions about
-                making a donation, please contact us at <a href="mailto:team1165@gmail.com">team1165@gmail.com</a><br /><br />Thank you for your support!</a
-            >
-           
-        </div>
-        <div style="height: 30%"></div>
-        <a
-            href="https://www.notion.so/d3c957c706684065a480779f7f0f240d?v=cd0bd8cc4da046f6a999f825990bcd94"
-            style="
-                color: white;
-                font-size: 2vw;
-                text-align: center;
-                justify-content: center;
-                align-items: center;
-                display: flex;
-            "
-            >Notion Book</a
-        >
-        <div style="height: 30%"></div> -->
+                Suggested page structure:
 
-        <!-- Footer -->
-        <div id="socials"></div>
+                <section aria-labelledby="donation-title">
+                    <h2 id="donation-title">Support Team Paradise</h2>
+                    <p>Donation and tax information goes here.</p>
+                    <button type="button">Donate securely with Stripe</button>
+                </section>
+            -->
+        </main>
+        <footer id="socials" aria-label="Team links" aria-busy="true"></footer>
     </body>
 </html>

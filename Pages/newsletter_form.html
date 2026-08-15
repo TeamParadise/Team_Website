@@ -1,51 +1,26 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
     <head>
-        <link
-            rel="icon"
-            type="image/x-icon"
-            href="/Resources/Favicons/favicon.png"
-        />
-        <link rel="stylesheet" href="/Pages/style.css" />
-        <script src="https://cdn.tailwindcss.com"></script>
+        <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-        <script>
-            window.addEventListener("DOMContentLoaded", (event) => {
-                fetch("/Pages/navbar.html")
-                    .then((response) => response.text())
-                    .then((data) => {
-                        document.getElementById("navbar").innerHTML = data;
-                    });
-                fetch("/Pages/socials.html")
-                    .then((response) => response.text())
-                    .then((data) => {
-                        document.getElementById("socials").innerHTML = data;
-                    });
-            });
-        </script>
+        <title>Newsletter | Team Paradise 1165</title>
+        <link rel="icon" href="/Resources/Favicons/favicon.png" />
+        <link rel="stylesheet" href="/Pages/style.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdn-images.mailchimp.com/embedcode/classic-061523.css"
+        />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="/Pages/site.js" defer></script>
     </head>
-
     <body>
-        <!--Navigation Bar-->
-        <div id="navbar"></div>
-
-        <div id="mc_embed_shell">
-            <link
-                href="//cdn-images.mailchimp.com/embedcode/classic-061523.css"
-                rel="stylesheet"
-                type="text/css"
-            />
-            <style type="text/css">
-                #mc_embed_signup {
-                    background: #fff;
-                    clear: left;
-                    font: 14px Helvetica, Arial, sans-serif;
-                    width: px;
-                }
-                /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
-                   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-            </style>
+        <a class="skip-link" href="#main-content">Skip to main content</a>
+        <header id="navbar" aria-label="Site header" aria-busy="true"></header>
+        <main id="main-content" tabindex="-1">
+            <!--
+                Mailchimp depends on several exact names and IDs below. Check
+                the README before changing this form, then test a real sign-up.
+            -->
             <div id="mc_embed_signup">
                 <form
                     action="https://teamparadise1165.us21.list-manage.com/subscribe/post?u=bfb8bbb50a765dbf4be3ea599&amp;id=4d6fdc5d11&amp;f_id=00c781e6f0"
@@ -56,26 +31,34 @@
                     target="_blank"
                 >
                     <div id="mc_embed_signup_scroll">
-                        <h2>
-                            Subscribe to Receive Monthly Updates About Team 1165
-                        </h2>
-                        <div class="indicates-required">
-                            <span class="asterisk">*</span> indicates required
-                        </div>
+                        <h1>Subscribe to Team Paradise updates</h1>
+                        <p>
+                            Receive monthly updates about Team 1165. Submitting
+                            this form opens Mailchimp in a new tab.
+                        </p>
+                        <p>
+                            <span aria-hidden="true">*</span> indicates a required
+                            field.
+                        </p>
                         <div class="mc-field-group">
-                            <label for="mce-EMAIL"
-                                >Email Address
-                                <span class="asterisk">*</span></label
-                            ><input
+                            <label for="mce-EMAIL">
+                                Email address <span aria-hidden="true">*</span>
+                            </label>
+                            <input
                                 type="email"
                                 name="EMAIL"
                                 class="required email"
                                 id="mce-EMAIL"
-                                required=""
-                                value=""
+                                autocomplete="email"
+                                required
                             />
                         </div>
-                        <div id="mce-responses" class="clear foot">
+                        <div
+                            id="mce-responses"
+                            class="clear foot"
+                            aria-live="polite"
+                        >
+                            <!-- Mailchimp writes validation and result messages here. -->
                             <div
                                 class="response"
                                 id="mce-error-response"
@@ -87,18 +70,18 @@
                                 style="display: none"
                             ></div>
                         </div>
-                        <div
-                            aria-hidden="true"
-                            style="position: absolute; left: -5000px"
-                        >
-                            /* real people should not fill this in and expect
-                            good things - do not remove this or risk form bot
-                            signups */
+                        <div class="honeypot" aria-hidden="true">
+                            <!--
+                                Bots often fill every field. Real visitors never
+                                see this one.
+                            -->
+                            <label for="mailing-list-check">Leave this field blank</label>
                             <input
+                                id="mailing-list-check"
                                 type="text"
                                 name="b_bfb8bbb50a765dbf4be3ea599_4d6fdc5d11"
                                 tabindex="-1"
-                                value=""
+                                autocomplete="off"
                             />
                         </div>
                         <div class="optionalParent">
@@ -115,11 +98,13 @@
                     </div>
                 </form>
             </div>
+            <!-- Mailchimp supplies jQuery and its form validation in this file. -->
             <script
-                type="text/javascript"
-                src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"
+                src="https://s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"
             ></script>
-            <script type="text/javascript">
+            <script>
+                // This field map is generated by Mailchimp for the team's audience.
+                // Most fields are not visible today, but the validator expects the map.
                 (function ($) {
                     window.fnames = new Array();
                     window.ftypes = new Array();
@@ -138,8 +123,7 @@
                 })(jQuery);
                 var $mcj = jQuery.noConflict(true);
             </script>
-        </div>
-        <!-- Footer -->
-        <div id="socials"></div>
+        </main>
+        <footer id="socials" aria-label="Team links" aria-busy="true"></footer>
     </body>
 </html>

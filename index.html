@@ -1,6 +1,8 @@
 <!doctype html>
 <html lang="en">
     <head>
+        <meta charset="utf-8" />
+        <title>Team Paradise 1165</title>
         <link
             rel="icon"
             type="image/x-icon"
@@ -8,45 +10,33 @@
         />
         <link rel="stylesheet" href="/Pages/style.css" />
         <script src="https://cdn.tailwindcss.com"></script>
+        <script src="/Pages/site.js" defer></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-        <script>
-            window.addEventListener("DOMContentLoaded", (event) => {
-                fetch("/Pages/navbar.html")
-                    .then((response) => response.text())
-                    .then((data) => {
-                        document.getElementById("navbar").innerHTML = data;
-                    });
-                fetch("/Pages/socials.html")
-                    .then((response) => response.text())
-                    .then((data) => {
-                        document.getElementById("socials").innerHTML = data;
-                    });
-            });
-        </script>
     </head>
 
     <body>
+        <a class="skip-link" href="#main-content">Skip to main content</a>
         <!--Navigation Bar-->
-        <div id="navbar"></div>
+        <header id="navbar" aria-label="Site header" aria-busy="true"></header>
 
         <!--Background Image + Logo-->
-        <header>
+        <div>
             <section class="logo-container">
                 <img
                     src="/Resources/ParadiseLogo.png"
                     id="Logo-Image"
-                    alt="Team 1165 Logo"
+                    alt="Team Paradise, FIRST Robotics Competition Team 1165"
                 />
                 <img
                     src="/Resources/Homepage-Picture.jpg"
                     id="Background-Image"
-                    alt="Background Image"
+                    alt=""
                 />
             </section>
-        </header>
+        </div>
 
-        <main>
+        <main id="main-content" tabindex="-1">
+            <h1 class="visually-hidden">Team Paradise 1165</h1>
             <section id="main-section">
                 <section id="home-section">
                     <!-- About Us -->
@@ -54,13 +44,13 @@
                         <header>
                             <h2 class="header2">About Us</h2>
                         </header>
-                        <section class="text-image-chunk" id="about-us">
+                        <div class="text-image-chunk" id="about-us">
                             <img
                                 src="/Resources/Team Photo 2025.JPG"
                                 id="about-us-image"
                                 alt="Picture of the Team in 2025"
                             />
-                            <div id="about-us-text">
+                            <p id="about-us-text">
                                 Our team&apos;s annual goal is to create a team
                                 of excited students that bring academic
                                 knowledge to robotics competition. We are part
@@ -76,12 +66,12 @@
                                 engineer robot to preform a set of tasks against
                                 a field of competitors, raise funds, design a
                                 team “brand”, and hone teamwork skills.
-                            </div>
-                        </section>
+                            </p>
+                        </div>
                     </section>
 
-                     Projects
-                     <section class="section-gray">
+                    <!-- Projects -->
+                    <section class="section-gray">
                         <header>
                             <h2 class="header2">Projects</h2>
                         </header>
@@ -105,42 +95,43 @@
 
                     <!-- Leaders -->
                     <section class="section-white" id="leaders">
-                        <p class="leaders-title">Teacher Sponsors</p>
-                        <section id="head-mentors">
+                        <h2 class="header2">Meet the Team</h2>
+                        <h3 class="leaders-title">Teacher Sponsors</h3>
+                        <div id="head-mentors">
                             <ul class="leaders-list">
                                 <li id="lead-coach-1">
                                     <div>Alexander Ruiz</div>
                                     <span> Coach </span>
                                 </li>
                             </ul>
-                        </section>
+                        </div>
 
-                        <p class="leaders-title">Mentors</p>
-                        <section id="mentors-1">
+                        <h3 class="leaders-title">Mentors</h3>
+                        <div id="mentors-1">
                             <ul class="leaders-list">
-                                <!-- <li>
-                                    <div>N/A</div>
-                                    <span> Build & Strategy </span>
-                                </li> -->
-                                <!-- <li>
-                                    <div>N/A</div>
-                                    <span> Administration & Build </span>
-                                </li> -->
+                                <!-- Future mentor slot:
+                                <li>
+                                    <div>Name</div>
+                                    <span>Build &amp; Strategy</span>
+                                </li>
+                                -->
+                                <!-- Future mentor slot:
+                                <li>
+                                    <div>Name</div>
+                                    <span>Administration &amp; Build</span>
+                                </li>
+                                -->
                                 <li>
                                     <div>David Boire</div>
-                                    <span> Build & Design </span>
+                                    <span> Build &amp; Design </span>
                                 </li>
                                 <li>
                                     <div>Ken Whitley</div>
                                     <span> Build </span>
                                 </li>
-                                <!-- <li> -->
-                                <!-- <div>N/A</div> -->
-                                <!-- <span> Administration & Strategy </span> -->
-                                <!-- </li> -->
                                 <li>
                                     <div>Ethan Mullins</div>
-                                    <span> Build & Design </span>
+                                    <span> Build &amp; Design </span>
                                 </li>
                                 <li>
                                     <div>Benjamin Levine</div>
@@ -148,13 +139,13 @@
                                 </li>
                                 <li>
                                     <div>John Studnicka</div>
-                                    <span> Programming & Web Design </span>
+                                    <span> Programming &amp; Web Design </span>
                                 </li>
                             </ul>
-                        </section>
+                        </div>
 
-                        <p class="leaders-title">Onseason Officers</p>
-                        <section id="officers">
+                        <h3 class="leaders-title">On-season Officers</h3>
+                        <div id="officers">
                             <ul class="leaders-list">
                                 <li>
                                     <div>Anthony</div>
@@ -173,14 +164,14 @@
                                     <span> Secretary </span>
                                 </li>
                             </ul>
-                        </section>
+                        </div>
 
-                        <p class="leaders-title">Captains</p>
-                        <section id="captains">
+                        <h3 class="leaders-title">Captains</h3>
+                        <div id="captains">
                             <ul class="leaders-list">
                                 <li>
                                     <div>Hudson</div>
-                                    <span> Captain of Design & CAD </span>
+                                    <span> Captain of Design &amp; CAD </span>
                                 </li>
                                 <li>
                                     <div>Max</div>
@@ -198,21 +189,23 @@
                                     <div>Max</div>
                                     <span> Captain of Safety </span>
                                 </li>
-                                <!-- <li>
-                                    <div>Kaylynn</div>
-                                    <span> Captain of Organization </span>
-                                </li> -->
+                                <!-- Future captain role:
+                                <li>
+                                    <div>Name</div>
+                                    <span>Captain of Organisation</span>
+                                </li>
+                                -->
                                 <li>
                                     <div>Riley</div>
                                     <span> Captain of Scouting </span>
                                 </li>
                             </ul>
-                        </section>
+                        </div>
                     </section>
                 </section>
 
                 <!-- Footer -->
-                <div id="socials"></div>
+                <footer id="socials" aria-label="Team links" aria-busy="true"></footer>
             </section>
         </main>
     </body>

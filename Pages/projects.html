@@ -1,52 +1,24 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
     <head>
-        <link
-            rel="icon"
-            type="image/x-icon"
-            href="/Resources/Favicons/favicon.png"
-        />
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Projects | Team Paradise 1165</title>
+        <link rel="icon" href="/Resources/Favicons/favicon.png" />
         <link rel="stylesheet" href="/Pages/style.css" />
         <script src="https://cdn.tailwindcss.com"></script>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-        <script>
-            window.addEventListener("DOMContentLoaded", (event) => {
-                fetch("/Pages/navbar.html")
-                    .then((response) => response.text())
-                    .then((data) => {
-                        document.getElementById("navbar").innerHTML = data;
-                    });
-                fetch("/Pages/socials.html")
-                    .then((response) => response.text())
-                    .then((data) => {
-                        document.getElementById("socials").innerHTML = data;
-                    });
-            });
-        </script>
+        <script src="/Pages/site.js" defer></script>
     </head>
-
     <body>
-        <!--Navigation Bar-->
-        <div id="navbar"></div>
-
-        <!-- Body -->
-        <div class="Title-Container">
-            <h1 class="page-title" style="width: 100%; text-align: center">
-                Projects
-            </h1>
-            <img
-                src="/Resources/Icons/team-icon.png"
-                id="TeamIcon"
-                alt="Team Icon"
-            />
-        </div>
-
-        <div class="UnderConstruction">
-            This section is under construction...
-        </div>
-
-        <!-- Footer -->
-        <div id="socials"></div>
+        <a class="skip-link" href="#main-content">Skip to main content</a>
+        <header id="navbar" aria-label="Site header" aria-busy="true"></header>
+        <main id="main-content" tabindex="-1">
+            <div class="Title-Container">
+                <h1 class="page-title">Projects</h1>
+                <img src="/Resources/Icons/team-icon.png" id="TeamIcon" alt="" />
+            </div>
+            <p class="UnderConstruction">This section is under construction.</p>
+        </main>
+        <footer id="socials" aria-label="Team links" aria-busy="true"></footer>
     </body>
 </html>

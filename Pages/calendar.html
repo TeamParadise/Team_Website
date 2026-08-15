@@ -1,57 +1,31 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
     <head>
-        <link
-            rel="icon"
-            type="image/x-icon"
-            href="/Resources/Favicons/favicon.png"
-        />
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Calendar | Team Paradise 1165</title>
+        <link rel="icon" href="/Resources/Favicons/favicon.png" />
         <link rel="stylesheet" href="/Pages/style.css" />
         <script src="https://cdn.tailwindcss.com"></script>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-        <script>
-            window.addEventListener("DOMContentLoaded", (event) => {
-                fetch("/Pages/navbar.html")
-                    .then((response) => response.text())
-                    .then((data) => {
-                        document.getElementById("navbar").innerHTML = data;
-                    });
-                fetch("/Pages/socials.html")
-                    .then((response) => response.text())
-                    .then((data) => {
-                        document.getElementById("socials").innerHTML = data;
-                    });
-            });
-        </script>
+        <script src="/Pages/site.js" defer></script>
     </head>
-
     <body class="flex flex-col min-h-screen">
-        <!--Navigation Bar-->
-        <header id="navbar" class="mb-16"></header>
-
-        <!-- Body -->
-        <main class="flex-grow flex flex-col">
+        <a class="skip-link" href="#main-content">Skip to main content</a>
+        <header id="navbar" class="mb-16" aria-label="Site header" aria-busy="true"></header>
+        <main id="main-content" class="flex-grow flex flex-col" tabindex="-1">
             <div class="flex justify-center items-center">
                 <h1 class="text-3xl font-bold px-4">Calendar</h1>
-                <img
-                    src="/Resources/Icons/calendar.png"
-                    class="w-20"
-                    alt="Team Icon"
-                />
+                <img src="/Resources/Icons/calendar.png" class="w-20" alt="" />
             </div>
             <div class="flex-grow relative overflow-hidden">
+                <!-- Google hosts the calendar; the title names it for screen readers. -->
                 <iframe
-                    class="absolute top-0 left-0 w-full h-full p-4"
-                    src="https://calendar.google.com/calendar/embed?src=c_classroomf63767d2%40group.calendar.google.com&ctz=America%2FPhoenix"
-                    style="border: 0"
-                    frameborder="0"
-                    scrolling="no"
+                    title="Team Paradise Google Calendar"
+                    class="calendar-frame absolute top-0 left-0 w-full h-full p-4"
+                    src="https://calendar.google.com/calendar/embed?src=c_classroomf63767d2%40group.calendar.google.com&amp;ctz=America%2FPhoenix"
                 ></iframe>
             </div>
         </main>
-
-        <!-- Footer -->
-        <footer id="socials"></footer>
+        <footer id="socials" aria-label="Team links" aria-busy="true"></footer>
     </body>
 </html>

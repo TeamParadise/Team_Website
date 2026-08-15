@@ -1,72 +1,43 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
     <head>
-        <link
-            rel="icon"
-            type="image/x-icon"
-            href="/Resources/Favicons/favicon.png"
-        />
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Shop | Team Paradise 1165</title>
+        <link rel="icon" href="/Resources/Favicons/favicon.png" />
         <link rel="stylesheet" href="/Pages/style.css" />
         <script src="https://cdn.tailwindcss.com"></script>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-        <script>
-            window.addEventListener("DOMContentLoaded", (event) => {
-                fetch("/Pages/navbar.html")
-                    .then((response) => response.text())
-                    .then((data) => {
-                        document.getElementById("navbar").innerHTML = data;
-                    });
-                fetch("/Pages/socials.html")
-                    .then((response) => response.text())
-                    .then((data) => {
-                        document.getElementById("socials").innerHTML = data;
-                    });
-            });
-        </script>
-        <style>
-            #iframeContainer {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 100vh; /* Full viewport height */
-            }
-            #zeffyIframe {
-                width: 80vw; /* 50% of the viewport width */
-                height: 90vh; /* 50% of the viewport height */
-            }
-        </style>
+        <script src="/Pages/site.js" defer></script>
     </head>
-
     <body class="flex flex-col min-h-screen">
-        <!--Navigation Bar-->
-        <header id="navbar" class="mb-16"></header>
-
-        <!-- Body -->
-        <main class="flex-grow flex flex-col">
+        <a class="skip-link" href="#main-content">Skip to main content</a>
+        <header id="navbar" class="mb-16" aria-label="Site header" aria-busy="true"></header>
+        <main id="main-content" class="flex-grow flex flex-col" tabindex="-1">
             <div class="flex justify-center items-center">
                 <h1 class="text-3xl font-bold px-4">Shop</h1>
-                <img
-                    src="/Resources/Icons/team-icon.png"
-                    class="w-20"
-                    alt="Team Icon"
-                />
+                <img src="/Resources/Icons/team-icon.png" class="w-20" alt="" />
             </div>
-            <h1 class="header2">Our Shop will be back in the new season!</h1>
-            <!-- <div class="flex-grow relative overflow-auto" id="iframeContainer">
-                <iframe
-                    id="zeffyIframe"
-                    class="w-full p-4"
-                    src="https://www.zeffy.com/embed/ticketing/78ec0d8d-12a7-4f4a-9b97-7c9beea43fd5"
-                    style="border: 0; overflow: hidden"
-                    frameborder="0"
-                    allowpaymentrequest
-                    allowTransparency="true"
-                ></iframe>
-            </div> -->
-        </main>
+            <p class="UnderConstruction">Our shop will be back in the new season.</p>
 
-        <!-- Footer -->
-        <div id="socials"></div>
+            <!--
+                Future Stripe shop notes:
+                - Replace this message with the product list.
+                - The server creates Checkout Sessions and keeps the secret key.
+                - Only fulfil an order after checking Stripe's signed webhook.
+
+                Previous Zeffy embed retained below as migration reference only:
+
+                <div class="flex-grow relative overflow-auto" id="iframeContainer">
+                    <iframe
+                        id="zeffyIframe"
+                        title="Team Paradise shop"
+                        class="w-full p-4"
+                        src="https://www.zeffy.com/embed/ticketing/78ec0d8d-12a7-4f4a-9b97-7c9beea43fd5"
+                        allow="payment"
+                    ></iframe>
+                </div>
+            -->
+        </main>
+        <footer id="socials" aria-label="Team links" aria-busy="true"></footer>
     </body>
 </html>
