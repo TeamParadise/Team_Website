@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+set -eu
+
+pnpm run format:staged
+pnpm run check:secrets
+pnpm run check

@@ -1,0 +1,143 @@
+.shop {
+    width: min(100% - 2rem, 75rem);
+    margin: 0 auto 4rem;
+}
+
+.shop-intro {
+    max-width: 42rem;
+    margin: 1rem 0 2rem;
+}
+
+.shop-intro h2,
+.shop-cart h2 {
+    margin: 0;
+}
+
+.shop-eyebrow {
+    margin-bottom: 0.25rem;
+    color: var(--brand);
+    font-weight: bold;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.shop-status {
+    min-height: 1.6rem;
+    margin: 0 0 1rem;
+}
+
+.shop-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(16rem, 20rem);
+    gap: 2rem;
+    align-items: start;
+}
+
+.shop-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 1.25rem;
+}
+
+.shop-product,
+.shop-cart {
+    background: var(--bg-card);
+    border: 1px solid var(--border-dark);
+}
+
+.shop-product-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: cover;
+    background: var(--b-secondary);
+}
+
+.shop-product-content,
+.shop-cart {
+    padding: 1rem;
+}
+
+.shop-product h3 {
+    margin: 0;
+}
+
+.shop-product-option-label {
+    display: grid;
+    gap: 0.25rem;
+    font-weight: bold;
+}
+
+.shop-product-options,
+.shop-add-to-cart,
+.shop-checkout,
+.shop-remove-item {
+    font: inherit;
+}
+
+.shop-product-options {
+    width: 100%;
+    padding: 0.5rem;
+}
+
+.shop-product-price,
+.shop-cart-total {
+    font-weight: bold;
+}
+
+.shop-add-to-cart,
+.shop-checkout {
+    width: 100%;
+    padding: 0.7rem 1rem;
+    color: #fff;
+    font-weight: bold;
+    background: var(--brand);
+    border: 0;
+    cursor: pointer;
+}
+
+.shop-add-to-cart:hover,
+.shop-add-to-cart:focus-visible,
+.shop-checkout:hover,
+.shop-checkout:focus-visible {
+    background: #780b23;
+}
+
+.shop-checkout:disabled {
+    color: var(--text-secondary);
+    background: var(--border-dark);
+    cursor: not-allowed;
+}
+
+.shop-cart-list {
+    padding: 0;
+    margin: 1rem 0;
+    list-style: none;
+}
+
+.shop-cart-item {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 0.25rem 0.75rem;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.shop-remove-item {
+    grid-column: 1 / -1;
+    justify-self: start;
+    padding: 0;
+    color: var(--brand);
+    background: transparent;
+    border: 0;
+    font-weight: bold;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+@media (max-width: 48rem) {
+    .shop-layout {
+        grid-template-columns: 1fr;
+    }
+}

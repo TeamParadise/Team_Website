@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+set -eu
+
+refs="$(cat)"
+printf '%s\n' "$refs" | node scripts/check-secrets.mjs --push
+pnpm run format:head
+pnpm run check

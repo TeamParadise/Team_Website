@@ -6,11 +6,18 @@
         <title>Shop | Team Paradise 1165</title>
         <link rel="icon" href="/Resources/Favicons/favicon.png" />
         <link rel="stylesheet" href="/Pages/style.css" />
+        <link rel="stylesheet" href="/Pages/shop.css" />
         <script src="/Pages/site.js" defer></script>
+        <script src="/Pages/shop.js" defer></script>
     </head>
     <body class="page-shell">
         <a class="skip-link" href="#main-content">Skip to main content</a>
-        <header id="navbar" class="navbar-space" aria-label="Site header" aria-busy="true"></header>
+        <header
+            id="navbar"
+            class="navbar-space"
+            aria-label="Site header"
+            aria-busy="true"
+        ></header>
         <main id="main-content" class="page-main" tabindex="-1">
             <div class="page-heading">
                 <h1>Shop</h1>
@@ -23,26 +30,71 @@
                     decoding="async"
                 />
             </div>
-            <p class="UnderConstruction">Our shop will be back in the new season.</p>
-
-            <!--
-                Future Stripe shop notes:
-                - Replace this message with the product list.
-                - The server creates Checkout Sessions and keeps the secret key.
-                - Only fulfil an order after checking Stripe's signed webhook.
-
-                Previous Zeffy embed retained below as migration reference only:
-
-                <div class="shop-frame-container" id="iframeContainer">
-                    <iframe
-                        id="zeffyIframe"
-                        title="Team Paradise shop"
-                        class="shop-frame"
-                        src="https://www.zeffy.com/embed/ticketing/78ec0d8d-12a7-4f4a-9b97-7c9beea43fd5"
-                        allow="payment"
-                    ></iframe>
+            <section class="shop" data-shop-api="" aria-labelledby="shop-intro">
+                <div class="shop-intro">
+                    <p class="shop-eyebrow">Team Paradise 1165</p>
+                    <h2 id="shop-intro">Support the team</h2>
+                    <p>
+                        Every purchase helps our students build, compete and
+                        represent Paradise Valley.
+                    </p>
                 </div>
-            -->
+
+                <div class="shop-layout">
+                    <div>
+                        <p id="shop-status" class="shop-status" role="status">
+                            The team shop is being prepared for the next sale.
+                        </p>
+                        <div
+                            id="shop-products"
+                            class="shop-grid"
+                            aria-live="polite"
+                        ></div>
+                    </div>
+
+                    <aside class="shop-cart" aria-labelledby="cart-heading">
+                        <h2 id="cart-heading">Your cart</h2>
+                        <div id="shop-cart-items">
+                            <p>Your cart is empty.</p>
+                        </div>
+                        <p id="shop-cart-total" class="shop-cart-total">
+                            Total: $0.00
+                        </p>
+                        <button
+                            id="shop-checkout"
+                            class="shop-checkout"
+                            type="button"
+                            disabled
+                        >
+                            Checkout
+                        </button>
+                    </aside>
+                </div>
+            </section>
+
+            <template id="shop-product-template">
+                <article class="shop-product">
+                    <img
+                        class="shop-product-image"
+                        src="/Resources/Icons/team-icon.png"
+                        width="600"
+                        height="600"
+                        alt=""
+                    />
+                    <div class="shop-product-content">
+                        <h3 class="shop-product-name">Shop item</h3>
+                        <p class="shop-product-description"></p>
+                        <label class="shop-product-option-label">
+                            <span>Option</span>
+                            <select class="shop-product-options"></select>
+                        </label>
+                        <p class="shop-product-price"></p>
+                        <button class="shop-add-to-cart" type="button">
+                            Add to cart
+                        </button>
+                    </div>
+                </article>
+            </template>
         </main>
         <footer id="socials" aria-label="Team links" aria-busy="true"></footer>
     </body>

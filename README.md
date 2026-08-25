@@ -107,18 +107,36 @@ The newsletter page uses Mailchimp's embedded form. Its action URL, field names,
 honeypot, response containers and validation script are connected. Do not rename
 or remove them without testing a real sign-up.
 
-## Future Stripe work
+## Shop
 
-The shop and donation pages contain commented notes for a future Stripe-hosted
-Checkout integration. No Stripe code is live yet.
+`Pages/shop.html` is the public shop interface. Its product grid and cart are
+ready for the small shop API that will run separately from GitHub Pages.
 
-The secret key and webhook secret must stay on a server, never in this site's
-HTML or browser JavaScript. The server should create Checkout Sessions and only
-record a paid order or donation after verifying Stripe's signed webhook. A visit
-to the success page is not proof of payment.
+The API URL belongs in the `data-shop-api` attribute on the `.shop` element. It
+must provide `GET /products`, returning an array of products in this form:
 
-Before building this, the team still needs to choose where the server runs, how
-orders are stored and who handles payment failures.
+```json
+[
+  {
+    "id": "shirt",
+    "name": "Team Paradise T-shirt",
+    "description": "Soft black team shirt.",
+    "imageUrl": "https://...",
+    "variants": [
+      { "id": "price_small", "label": "Small", "price": 2000, "currency": "usd", "availableQuantity": 12 }
+    ]
+  }
+]
+```
+
+Prices are integer cents. `POST /checkout` will receive the cart's selected
+variant IDs and quantities. It must validate the stock again on the server,
+reserve stock while payment is pending, and create Stripe's embedded Checkout
+Session. A Stripe webhook, not the success page, confirms paid orders and
+releases stock for expired or failed sessions.
+
+Never put Stripe secret keys, webhook secrets, Google credentials or inventory
+write access in this repository's browser code.
 
 ## JavaScript, TypeScript and frameworks
 

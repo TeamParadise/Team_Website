@@ -5,11 +5,16 @@
     "scripts": {
         "check": "pnpm run check:html && pnpm run check:js && pnpm run check:site",
         "check:html": "html-validate \"index.html\" \"Pages/*.html\"",
-        "check:js": "node --check Pages/site.js && node --check scripts/check-site.mjs",
+        "check:js": "node --check Pages/site.js && node --check Pages/shop.js && node --check scripts/check-format.mjs && node --check scripts/check-secrets.mjs && node --check scripts/check-site.mjs",
         "check:site": "node scripts/check-site.mjs",
+        "check:secrets": "node scripts/check-secrets.mjs",
+        "format:head": "node scripts/check-format.mjs --head",
+        "format:staged": "node scripts/check-format.mjs --staged",
+        "prepare": "git config core.hooksPath .githooks",
         "serve": "python3 -m http.server 4173"
     },
     "devDependencies": {
-        "html-validate": "10.17.0"
+        "html-validate": "10.17.0",
+        "prettier": "3.6.2"
     }
 }
